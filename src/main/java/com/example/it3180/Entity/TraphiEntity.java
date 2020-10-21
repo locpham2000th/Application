@@ -9,7 +9,7 @@ public class TraphiEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "hogiadinh_id")
@@ -25,11 +25,11 @@ public class TraphiEntity {
     @Column(name = "thoi_gian_dong")
     private Instant thoigiandong;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -2,7 +2,6 @@ package com.example.it3180.Entity;
 
 import javax.persistence.*;
 import java.time.Instant;
-import java.util.List;
 
 @Entity
 @Table(name = "ung_ho")
@@ -10,7 +9,7 @@ public class UnghoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(name = "so_tien")
     private int sotien;
@@ -24,11 +23,11 @@ public class UnghoEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     private DonggopEntity donggop_ungho;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

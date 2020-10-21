@@ -5,15 +5,15 @@ import java.time.Instant;
 
 public class TraphiDTO {
 
-    private int id;
+    private Long id;
     private int trangthai;
     private Instant thoigiandong;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
