@@ -9,7 +9,8 @@ import java.util.List;
 public class DonggopEntity {
 
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "ten_dong_gop")
     private String TenDongGop;
@@ -20,11 +21,11 @@ public class DonggopEntity {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "donggop_ungho")
     private List<UnghoEntity> ungho = new ArrayList<>();
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

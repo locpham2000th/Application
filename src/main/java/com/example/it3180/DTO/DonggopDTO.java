@@ -7,17 +7,17 @@ import java.util.List;
 
 public class DonggopDTO {
 
-    private String id;
+    private Long id;
 
     private String TenDongGop;
 
     private String Mucdich;
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

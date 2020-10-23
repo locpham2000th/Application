@@ -8,6 +8,24 @@ public class UnghoDTO {
     private Long id;
     private int sotien;
     private Instant thoigian;
+    private String hogiadinh_id;
+    private Long donggop_id;
+
+    public String getHogiadinh_id() {
+        return hogiadinh_id;
+    }
+
+    public void setHogiadinh_id(String hogiadinh_id) {
+        this.hogiadinh_id = hogiadinh_id;
+    }
+
+    public Long getDonggop_id() {
+        return donggop_id;
+    }
+
+    public void setDonggop_id(Long donggop_id) {
+        this.donggop_id = donggop_id;
+    }
 
     public Long getId() {
         return id;

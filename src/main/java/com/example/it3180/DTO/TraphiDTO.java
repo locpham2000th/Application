@@ -8,6 +8,24 @@ public class TraphiDTO {
     private Long id;
     private int trangthai;
     private Instant thoigiandong;
+    private String hogiadinh_id;
+    private String phi_id;
+
+    public String getHogiadinh_id() {
+        return hogiadinh_id;
+    }
+
+    public void setHogiadinh_id(String hogiadinh_id) {
+        this.hogiadinh_id = hogiadinh_id;
+    }
+
+    public String getPhi_id() {
+        return phi_id;
+    }
+
+    public void setPhi_id(String phi_id) {
+        this.phi_id = phi_id;
+    }
 
     public Long getId() {
         return id;
