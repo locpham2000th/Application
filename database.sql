@@ -19,7 +19,7 @@ create table phi(
 );
 
 create table tra_phi(
-	id int IDENTITY(1,1) not null primary key,
+	id int primary key AUTO_INCREMENT,
 	phi_id varchar(3) not null,
 	hogiadinh_id varchar(5) not null,
 	trang_thai int not null, -- 1 la da dong, 0 la chua dong
@@ -39,13 +39,20 @@ create table dong_gop(
 );
 
 create table ung_ho(
-	id int IDENTITY(1,1) not null primary key,
+	id int primary key AUTO_INCREMENT,
 	donggop_id varchar(3) not null,
 	hogiadinh_id varchar(5) not null,
 	so_tien int not null,
 	thoi_gian date,
-	constraint ungho_fk_donggop foreign key (donggop_id) references dong_gop(id) 
+	constraint ungho_fk_donggop foreign key (donggop_id) references dong_gop(id)
 	ON DELETE CASCADE,
 	constraint ungho_fk_hogiadinh foreign key (hogiadinh_id) references ho_gia_dinh(id)
 	ON DELETE CASCADE
+);
+
+CREATE TABLE Persons (
+    Personid int PRIMARY KEY AUTO_INCREMENT,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int
 );
