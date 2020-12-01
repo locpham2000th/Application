@@ -1,4 +1,4 @@
-package com.example.it3180.Service;
+package com.example.it3180.Service.quanLyHoGiaDinh;
 
 import com.example.it3180.DTO.quanLyHoGiaDinh.HogiadinhDTO;
 

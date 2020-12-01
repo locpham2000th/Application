@@ -1,7 +1,7 @@
 package com.example.it3180.API;
 
 import com.example.it3180.DTO.quanLyHoGiaDinh.HogiadinhDTO;
-import com.example.it3180.Service.impl.HogiadinhService;
+import com.example.it3180.Service.quanLyHoGiaDinh.HogiadinhService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
