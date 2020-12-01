@@ -1,6 +1,6 @@
-package com.example.it3180.Service.impl;
+package com.example.it3180.Service.quanLyDongGop;
 
-import com.example.it3180.Service.IDonggopService;
+import com.example.it3180.Service.quanLyDongGop.IDonggopService;
 import org.springframework.stereotype.Service;
 
 @Service

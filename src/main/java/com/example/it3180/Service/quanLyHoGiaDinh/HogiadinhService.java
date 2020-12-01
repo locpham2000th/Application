@@ -1,10 +1,10 @@
-package com.example.it3180.Service.impl;
+package com.example.it3180.Service.quanLyHoGiaDinh;
 
-import com.example.it3180.Converter.HogiadinhConverter;
-import com.example.it3180.DTO.HogiadinhDTO;
+import com.example.it3180.Converter.quanLyHoGiaDInh.HogiadinhConverter;
+import com.example.it3180.DTO.quanLyHoGiaDinh.HogiadinhDTO;
 import com.example.it3180.Entity.HogiadinhEntity;
 import com.example.it3180.Repository.HogiadinhRepository;
-import com.example.it3180.Service.IHogiadinhServer;
+import com.example.it3180.Service.quanLyHoGiaDinh.IHogiadinhServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

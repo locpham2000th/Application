@@ -1,6 +1,6 @@
-package com.example.it3180.Converter;
+package com.example.it3180.Converter.quanLyPhi;
 
-import com.example.it3180.DTO.PhiDTO;
+import com.example.it3180.DTO.quanLyPhi.PhiDTO;
 import com.example.it3180.Entity.PhiEntity;
 import org.springframework.stereotype.Component;
 
