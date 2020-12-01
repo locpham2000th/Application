@@ -1,6 +1,6 @@
-package com.example.it3180.Converter;
+package com.example.it3180.Converter.quanLyDongGop;
 
-import com.example.it3180.DTO.UnghoDTO;
+import com.example.it3180.DTO.quanLyDongGop.UnghoDTO;
 import com.example.it3180.Entity.UnghoEntity;
 import com.example.it3180.Repository.DonggopRepository;
 import com.example.it3180.Repository.HogiadinhRepository;

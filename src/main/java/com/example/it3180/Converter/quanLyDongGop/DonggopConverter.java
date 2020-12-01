@@ -1,6 +1,6 @@
-package com.example.it3180.Converter;
+package com.example.it3180.Converter.quanLyDongGop;
 
-import com.example.it3180.DTO.DonggopDTO;
+import com.example.it3180.DTO.quanLyDongGop.DonggopDTO;
 import com.example.it3180.Entity.DonggopEntity;
 import org.springframework.stereotype.Component;
 

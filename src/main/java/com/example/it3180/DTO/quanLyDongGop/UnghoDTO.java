@@ -1,4 +1,4 @@
-package com.example.it3180.DTO;
+package com.example.it3180.DTO.quanLyDongGop;
 
 import javax.persistence.Column;
 import java.time.Instant;

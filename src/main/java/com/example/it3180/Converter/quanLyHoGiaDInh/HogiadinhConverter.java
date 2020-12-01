@@ -1,6 +1,6 @@
-package com.example.it3180.Converter;
+package com.example.it3180.Converter.quanLyHoGiaDInh;
 
-import com.example.it3180.DTO.HogiadinhDTO;
+import com.example.it3180.DTO.quanLyHoGiaDinh.HogiadinhDTO;
 import com.example.it3180.Entity.HogiadinhEntity;
 import org.springframework.stereotype.Component;
 

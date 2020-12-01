@@ -1,6 +1,6 @@
-package com.example.it3180.Converter;
+package com.example.it3180.Converter.quanLyPhi;
 
-import com.example.it3180.DTO.TraphiDTO;
+import com.example.it3180.DTO.quanLyPhi.TraphiDTO;
 import com.example.it3180.Entity.TraphiEntity;
 import com.example.it3180.Repository.HogiadinhRepository;
 import com.example.it3180.Repository.PhiRepository;

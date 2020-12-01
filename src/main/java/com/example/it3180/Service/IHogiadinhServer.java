@@ -1,6 +1,6 @@
 package com.example.it3180.Service;
 
-import com.example.it3180.DTO.HogiadinhDTO;
+import com.example.it3180.DTO.quanLyHoGiaDinh.HogiadinhDTO;
 
 public interface IHogiadinhServer {
 

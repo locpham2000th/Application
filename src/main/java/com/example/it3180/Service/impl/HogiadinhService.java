@@ -1,7 +1,7 @@
 package com.example.it3180.Service.impl;
 
-import com.example.it3180.Converter.HogiadinhConverter;
-import com.example.it3180.DTO.HogiadinhDTO;
+import com.example.it3180.Converter.quanLyHoGiaDInh.HogiadinhConverter;
+import com.example.it3180.DTO.quanLyHoGiaDinh.HogiadinhDTO;
 import com.example.it3180.Entity.HogiadinhEntity;
 import com.example.it3180.Repository.HogiadinhRepository;
 import com.example.it3180.Service.IHogiadinhServer;
