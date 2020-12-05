@@ -5,6 +5,7 @@ import com.example.it3180.Service.quanLyHoGiaDinh.HogiadinhService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,8 +29,13 @@ public class HogiadinhAPI {
     }
 
     @PutMapping(value = "/edithogiadinh")
-    public HogiadinhDTO editHogiadinhDTO(@Validated String id, String hotenchuho, int sonhanhkhau, String diachi, int trangthai){
+    public HogiadinhDTO edithogiadinh(@Validated String id, String hotenchuho, int sonhanhkhau, String diachi, int trangthai){
         return hogiadinhService.edithogiadinh(id, hotenchuho,sonhanhkhau,diachi,trangthai);
+    }
+
+    @DeleteMapping(value = "/deletehogiadinh")
+    public String deletehogiadinh(@Validated String id){
+        return hogiadinhService.deletehogiadinh(id);
     }
 
 }

@@ -48,8 +48,13 @@ public class HogiadinhService implements IHogiadinhServer {
 
     @Override
     public String deletehogiadinh(String id) {
-
-        return null;
+        if(hogiadinhRepository.findById(id).isPresent()) {
+            HogiadinhEntity hogiadinhEntity = hogiadinhRepository.getOne(id);
+            hogiadinhRepository.delete(hogiadinhEntity);
+            return "Done";
+        }else{
+            return "sorry";
+        }
     }
 
 }
