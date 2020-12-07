@@ -6,5 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface DonggopRepository extends JpaRepository<DonggopEntity, Long> {
 
 
+    DonggopEntity getById(Long id);
 
 }
