@@ -1,0 +1,129 @@
+/*-------------------------------------------------------------*/
+/*--------------------Default Setting--------------------------*/
+/*-------------------------------------------------------------*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+html{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    color:#5e5e5e;
+    background-color: white;
+    text-rendering: optimizeLegibility;
+}
+
+/*-------------------------------------------------------------*/
+/*--------------------REUSABLE---------------------------------*/
+/*-------------------------------------------------------------*/
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+section{
+    padding: 20px;
+}
+
+/*----------------SCROLL BAR-----------------------------------*/
+
+
+/* width */
+ ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+ ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #ffcccc; 
+    border-radius: 5px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ff6666; 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff3333;
+  }
+
+/*-------------------------------------------------------------*/
+/*--------------------HEADER-----------------------------------*/
+/*-------------------------------------------------------------*/
+
+header{
+    margin: 50px;
+}
+
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 180%;
+}
+
+h3, h5{
+    text-align: center;
+}
+
+h5{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/*-------------------------------------------------------------*/
+/*--------------------BODY-------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.body-section{
+    border: 5px solid #ff6666;
+    border-radius: 15px;
+    width: 1140px;
+    height: 70vh;
+    margin: 0 auto;
+    padding: 30px 40px;
+}
+
+ul{
+    overflow-y: scroll;
+    height: 50vh;
+    padding: 10px;
+}
+
+.col-name-row{
+    margin-bottom: 20px;
+    width: 1016px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.tuple{
+    margin-bottom: 10px;
+}
+
+li{
+    list-style: none;
+    border: 2px solid #ff6666;
+    border-radius: 20px;
+}
+
+a{
+    color:#5e5e5e;
+}
+

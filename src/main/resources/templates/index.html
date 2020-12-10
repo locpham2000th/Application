@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Residential Group 7</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="resources/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="resources/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="resources/favicons/favicon-16x16.png">
+        <link rel="manifest" href="resources/favicons/site.webmanifest">
+        <link rel="mask-icon" href="resources/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="resources/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="../static/resources/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <script src="https://kit.fontawesome.com/bbf0daf20d.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="vendors/css/grid.css">
+        <link rel="stylesheet" href="resources/css/index.css">
+        <link rel="stylesheet" href="resources/css/queries.css">
+    </head>
+    <body>
+        <header id="home">
+            <nav>
+                <a href="#home"><img class="logo" src="resources/img/logo.png" alt="logo"></a>
+                <ul class="main-nav">
+                    <li><a href="#family">Family</a></li>
+                    <li><a href="#fee">Fee</a></li>
+                    <li><a href="#donate">Donate</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#sponsors">Sponsors</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="heading-main-box">
+                    <h1>
+                        This website provides<br>professional tools to<br>manage fees and donations
+                    </h1>
+                    <!-- <a href="#" class="btn">Tell Me</a>
+                    <a href="#" class="btn">Join Us</a> -->
+                </div>
+            </div>
+        </header>
+        <section class="family-section" id="family">
+            <div class="row">
+                <h2>Family</h2>
+                <p class="p-long">
+                    This section contain a list of families and information about them
+                </p>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-3 family-picture">
+                    <a href="/searchfamily">
+                        <img src="resources/img/family4.jpg" alt="family1">
+                        <p class="picture-title">
+                            Search family
+                        </p>
+                    </a>
+                </div>
+                <div class="col span-1-of-3 family-picture">
+                    <a href="/addfamily">
+                        <img src="resources/img/family5.jpg" alt="family2">
+                        <p class="picture-title">
+                            Add family
+                        </p>
+                    </a>
+                </div>
+                <div class="col span-1-of-3 family-picture">
+                    <a href="#contact">
+                        <img src="resources/img/family6.jpg" alt="family3">
+                        <p class="picture-title">
+                            Help
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="fee-section" id="fee">
+            <h2>Fee</h2>
+            <p class="p-long">
+                This section contains a list of fees and their information
+            </p>
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <div class="fee-box">
+                        <h3>Search fee</h3>
+                        <p class="fee-box-text">Fill in the form below</p>
+                        <ul>
+                            <li>Code: <input type="text" placeholder="Fee code"></li>
+                            <li>Name: <input type="text" placeholder="Fee name"></li>
+                        </ul>
+                        <a href="/feesearchresult" class="btn">Search</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-3">
+                    <div class="fee-box">
+                        <h3>Add fee</h3>
+                        <p class="fee-box-text">Fill in the form below</p>
+                        <ul>
+                            <li>Code: <input type="text" placeholder="Fee code"></li>
+                            <li>Name: <input type="text" placeholder="Fee name"></li>
+                            <li>Amount: <input type="text" placeholder="Amount of money"></li>
+                            <li>Purpose: <input type="text" placeholder="Purpose"></li>
+                        </ul>
+                        <a href="#" class="btn">Add</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-3">
+                    <div class="fee-box">
+                        <h3>Help</h3>
+                        <p class="fee-box-text">What's your problem?</p>
+                        <ul>
+                            <li>Problem: <input type="text" placeholder="Your problem here"></li>
+                        </ul>
+                        <a href="#contact" class="btn">Help</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="donate-section" id="donate">
+            <h2>Donate</h2>
+            <p class="p-long">
+                This section contains a list of donates and their information
+            </p>
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <div class="fee-box">
+                        <h3>Seach donate</h3>
+                        <p class="fee-box-text">Fill in the form below</p>
+                        <ul>
+                            <li>Code: <input type="text" placeholder="Donate code"></li>
+                            <li>Name: <input type="text" placeholder="Donate name"></li>
+                        </ul>
+                        <a href="/donatesearchresult" class="btn">Search</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-3">
+                    <div class="fee-box">
+                        <h3>Add donate</h3>
+                        <p class="fee-box-text">Fill in the form below</p>
+                        <ul>
+                            <li>Code: <input type="text" placeholder="Donate code"></li>
+                            <li>Name: <input type="text" placeholder="Donate name"></li>
+                            <li>Purpose: <input type="text" placeholder="Purpose"></li>
+                            <li>Note: <input type="text" placeholder="Note"></li>
+                        </ul>
+                        <a href="#" class="btn">Add</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-3">
+                    <div class="fee-box">
+                        <h3>Help</h3>
+                        <p class="fee-box-text">What's your problem?</p>
+                        <ul>
+                            <li>Problem: <input type="text" placeholder="Your problem here"></li>
+                        </ul>
+                        <a href="#contact" class="btn">Help</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonials-section" id="testimonials">
+            <h2>Testimonials</h2>
+            <p class="p-long">
+                This section contains our customer's feedbacks.
+            </p>
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <blockquote>
+                        You guys are the best! Keep up the great work!
+                        <cite>
+                            <img src="resources/img/person1.jpg" alt="person1"> The Anh Tran
+                        </cite>
+                    </blockquote>
+                </div>
+                <div class="col span-1-of-3">
+                    <blockquote>
+                        Thank you so much for the job. Well done!
+                        <cite>
+                            <img src="resources/img/person2.jpg" alt="person2"> Loc Pham
+                        </cite>
+                    </blockquote>
+                </div>
+                <div class="col span-1-of-3">
+                    <blockquote>
+                        I just wanted to let you know that it’s been great working with you.
+                        <cite>
+                            <img src="resources/img/person3.jpg" alt="person3"> Chung Le
+                        </cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section class="sponsors-section" id="sponsors">
+            <h2>Sponsors</h2>
+            <div class="row">
+                <ul class="sponsors-showcase">
+                    <li>
+                        <figure>
+                            <img class="sponsors-logo" src="resources/img/sponsor1.jpg" alt="sponsor1">
+                            <figcaption>
+                                HUST
+                            </figcaption>
+                        </figure>
+                    </li>
+
+                    <li>
+                        <figure>
+                            <img class="sponsors-logo" src="resources/img/sponsor2.png" alt="sponsor2">
+                            <figcaption>
+                                SOICT
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img class="sponsors-logo" src="resources/img/sponsor3.png" alt="sponsor3">
+                            <figcaption>
+                                Facebook
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img class="sponsors-logo" src="resources/img/sponsor4.png" alt="sponsor4">
+                            <figcaption>
+                                Google
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="contact-section" id="contact">
+            <h2>Contact</h2>
+            <div class="row">
+                <div class="col span-1-of-2">
+                    <ul class="information">
+                        <li><i class="fas fa-map-marker-alt pointer"></i>Address: Giai Phong Street, Hanoi City</li>
+                        <li><i class="fas fa-envelope"></i>Email: ultimate_team@hust.edu.vn</li>
+                        <li><i class="fas fa-phone"></i></i>Phone: 123-000-9999</li>
+                    </ul>
+                    <ul class="social-icons">
+                        <li><i class="fab fa-facebook-square"></i></li>
+                        <li><i class="fab fa-google-plus-square"></i></li>
+                        <li><i class="fab fa-instagram-square"></i></li>
+                        <li><i class="fab fa-twitter-square"></i></li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                    <form>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label>Name</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="text" placeholder="Your Name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label>Email</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="email" placeholder="Your Email">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label>Message</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <textarea placeholder="Your Message" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <input type="submit" class="btn" value="Send">
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="vendors/js/jquery.waypoints.min.js"></script>
+        <script type="text/javascript" src="resources/js/index.js"></script>
+
+    </body>
+</html>

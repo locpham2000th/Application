@@ -1,0 +1,148 @@
+/*-------------------------------------------------------------*/
+/*--------------------Default Setting--------------------------*/
+/*-------------------------------------------------------------*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+html{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    color:#5e5e5e;
+    background-color: white;
+    text-rendering: optimizeLegibility;
+}
+
+/*-------------------------------------------------------------*/
+/*--------------------REUSABLE---------------------------------*/
+/*-------------------------------------------------------------*/
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+section{
+    padding: 20px;
+}
+
+body{
+    background-color: #ff6666;
+    height: 100vh;
+    background-image: linear-gradient(45deg, rgba(238, 238, 238, 0.3), rgba(255, 102, 102, 0.3)), url("../img/background-image.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/*-------------------------------------------------------------*/
+/*--------------------HEADER-----------------------------------*/
+/*-------------------------------------------------------------*/
+
+.logo{
+    float: left;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+.logo-image{
+    width: 150px;
+}
+
+h1{
+    float: left;
+    color: white;
+    font-size: 250%;
+    margin-top: 40px;
+}
+
+.btn{
+    text-decoration: none;
+    color: white;
+    border: white 2px solid;
+    background-color: #ff6666;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 20px;
+    margin: 0 10px;
+    width: 120px;
+    display: inline-block;
+    text-align: center;
+    transition: all .3s;
+}
+
+/*-------------------------------------------------------------*/
+/*--------------------BODY-------------------------------------*/
+/*-------------------------------------------------------------*/
+
+form{
+    margin: 0px auto;
+    background-color: rgba(255, 153, 153, 0.3);
+    width: 800px;
+    padding: 50px;
+    border: 5px #ff3333 solid;
+    border-radius: 20px;
+}
+
+h2{
+    text-align: center;
+    font-size: 200%;
+    color: white;
+    margin-bottom: 30px;
+}
+
+label{
+    font-size: 120%;
+    font-weight: 700;
+    color: white;
+}
+
+form input[type="text"] {
+    height: 30px;
+    padding: 7px 10px;
+    outline: none;
+    border: 2px solid #ff6666;
+    border-radius: 15px;
+    width: 90%;
+}
+
+form .btn {
+    height: 50px;
+    padding: 10px 20px;
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 30px;
+    transition: all .5s;
+}
+
+form .btn:hover,
+form .btn:active{
+    background-color: #ff3333;  
+    transform: scale(1.2);
+}
+
+/*-------------------------------------------------------------*/
+/*--------------------END--------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.end-section .btn{
+    height: 50px;
+    padding: 10px 20px;
+    width: 20%;
+    margin-left: 20%;
+}
