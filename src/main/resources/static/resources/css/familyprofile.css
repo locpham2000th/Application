@@ -1,0 +1,210 @@
+/*-------------------------------------------------------------*/
+/*--------------------Default Setting--------------------------*/
+/*-------------------------------------------------------------*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+html{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    color:#5e5e5e;
+    background-color: white;
+    text-rendering: optimizeLegibility;
+}
+
+/*-------------------------------------------------------------*/
+/*--------------------REUSABLE---------------------------------*/
+/*-------------------------------------------------------------*/
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h2{
+    color: white;
+    font-size: 100%;
+    font-weight: 700;
+    margin-left: 20px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+h3{
+    color: white;
+    font-size: 150%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+body{
+    background: url("../img/background-image1.jpg"), linear-gradient(to right, #ff6666, #ff9999, #ff6666);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 150vh;
+}
+
+.btn{
+    text-decoration: none;
+    color: white;
+    background-color: #ff6666;
+    padding: 15px 30px;
+    border-radius: 20px;
+    margin: 0 10px;
+    width: 190px;
+    display: inline-block;
+    text-align: center;
+    transition: all .3s;
+    outline: none;
+}
+
+.btn:hover,
+.btn:active{
+    background-color: #ff3333;
+}
+
+input[type='text']{
+    border: #ff3333 2px solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    outline: none;
+    font-size: 15px;
+    color: #ff3333;
+}
+
+/*-------------------------------------------------------------*/
+/*--------------------HEADER-----------------------------------*/
+/*-------------------------------------------------------------*/
+
+.header-nav{
+    height: 5vh;
+    background-color: #ff6666;
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+}
+
+.logo{
+    width: 50px;
+    float: left;
+    margin-left: 10px;
+    margin-top: -7px;
+}
+.header-section{
+    margin-top: 6vh;
+}
+
+.header-section img[alt="family-background-image"]{
+    width: 1140px;
+}
+
+.header-section .row{
+    position: relative;
+}
+
+.header-section img[alt="family-avatar"]{
+    border: 5px solid rgba(255, 102, 102, 1);
+    border-radius: 50%;
+    position: absolute;
+    left: 40%;
+    top: 65%;
+}
+
+header{
+    margin-bottom: 100px;
+}
+
+/*-------------------------------------------------------------*/
+/*--------------------BODY-------------------------------------*/
+/*-------------------------------------------------------------*/
+
+.information-section{
+    border: white 5px solid;
+    background-color:#ff6666;
+    /* background: linear-gradient(to right, #ff6666, #ff9999, #ff6666); */
+    color: white;
+    padding: 20px 10px 50px 50px;
+    border-radius: 15px;
+    font-size: 100%;
+    font-weight: 500;
+    height: 65vh;
+    box-shadow: 2px 2px 10px #ff3333;
+}
+
+.information-section h3{
+    display: inline-block;
+    margin-bottom: 50px;
+    margin-left: 140px;
+}
+
+.option-section{
+    border: white 5px solid;
+    border-radius: 15px;
+    margin-bottom: 23px;
+    padding: 20px 10px 50px 50px;
+    background-color: #ff6666;
+    box-shadow: 2px 2px 10px #ff3333;
+    /* background: linear-gradient(to right, #ff6666, #ff9999, #ff6666); */
+}
+
+.option-section h3{
+    display: inline-block;
+    margin-left: 170px;
+}
+
+.option-section .row{
+    margin-left: 40px;
+}
+
+.option-section .btn{
+    background-color: white;
+    width: 120px;
+    color: #ff3333;
+    font-size: 80%;
+    font-weight: 600;
+    border: white 2px solid;
+    margin-left: 50px;
+    transition: all .5s;
+}
+
+.option-section .btn:hover,
+.option-section .btn:active{
+    background-color: #ff6666;
+    color: white;
+}
+
+.statistics-section{
+    border: white 5px solid;
+    border-radius: 15px;
+    padding: 20px 10px 50px 50px;
+    font-size: 100%;
+    font-weight: 500;
+    color: white;
+    background-color: #ff6666;
+    box-shadow: 2px 2px 10px #ff3333;
+    /* background: linear-gradient(to right,  #ff6666, #ff9999, #ff6666); */
+}
+
+.statistics-section h3{
+    display: inline-block;
+    margin-left: 160px;
+}
+
+

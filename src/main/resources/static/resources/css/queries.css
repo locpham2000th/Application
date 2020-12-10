@@ -1,0 +1,247 @@
+/* Big Tablet to 1200px */
+@media only screen and (max-width:1200px){
+    html{
+        font-size: 16px;
+    }
+
+    .logo{
+        width: 200px;
+        margin-left: 20px;
+    }
+
+    .main-nav{
+        margin-top: 70px;
+    }
+
+    .main-nav li{
+        margin-right: 15px;
+    }
+
+    .heading-main-box{
+        transform: translate(-30%, -10%);
+    }
+
+    .contact-section form .btn{
+        margin-top: 10%;
+        margin-left: 5%;
+    }
+}
+
+/* Small tablet to big tablet 768 - 1023px */
+@media only screen and (max-width: 1023px){
+    .logo{
+        width: 100px;
+    }
+
+    header{
+        height: 40vh;
+    }
+
+    .main-nav{
+        margin-top: 30px;
+    }
+
+    .heading-main-box{
+        top: 20%;
+        transform:  translate(-20%, -20%);
+    }
+
+    .heading-main-box h1{
+        font-size: 150%;
+        letter-spacing: 2px;
+        word-spacing: 5px;
+    }
+
+    .main-nav li a{
+        font-size: 120%;
+        font-weight: 600;
+    }
+
+    .fee-box{
+        height: 300px;
+    }
+
+    .fee-box ul li{
+        margin-left: 5%;
+    }
+
+    .btn{
+        padding: 5px 10px;
+    }
+
+    .fee-box .btn{
+        left: 0%;
+    }
+
+    .fee-box-text{
+        font-size: 100%;
+    }
+
+    .fee-box ul li input{
+        right: 5%;
+    }
+
+    blockquote{
+        font-size: 120%;
+    }
+
+    cite{
+        font-size: 80%;
+    }
+
+    cite img{
+        height: 50px;
+        margin-right: 5px;
+    }
+
+    .sponsors-section{
+        height: 50vh;
+    }
+
+    .sponsors-logo{
+        width: 100px;
+    }
+
+    .contact-section{
+        height: 80vh;
+    }
+
+    .information li{
+        font-size: 95%;
+    }
+
+    .contact-section form .btn{
+        width: 50%;
+        margin-left: 25%;
+    }
+}
+
+/* Small phone to small table  */
+@media only screen and (max-width:767px){
+    .col{
+        width: 100%;
+        display: block;
+        align-items: center;
+    }
+
+    .main-nav{
+        display: none;
+    }
+
+    .logo{
+        width: 150px;
+    }
+
+    .heading-main-box{
+        transform: translate(-15%, 5%);
+    }
+
+    .heading-main-box h1{
+        font-size: 120%;
+    }
+
+    .family-section, .fee-section, .donate-section{
+        height: 270vw;
+    }
+
+    .testimonials-section{
+        height: 180vw;
+    }
+
+    .family-section .col{
+        margin-left: 5%;
+    }
+
+    .fee-box{
+        width: 80%;
+        margin-bottom: 20px;
+        margin-left: 10%;
+    }
+
+    blockquote{
+        margin-bottom: 20px;
+    }
+
+    cite{
+        font-size: 120%;
+    }
+
+    cite img{
+        height: 80px;
+    }
+
+    .sponsors-logo{
+        width: 60px;
+        border-width: 2px;
+    }
+
+    figcaption{
+        font-size: 100%;
+    }
+
+    .contact-section{
+        height: 200vw;
+    }
+
+    .contact-section form{
+        margin-top: 10px;
+        margin-left: -5%;
+    }
+
+    .information li{
+        margin-right: 20px;
+        font-size: 100%;
+    }
+
+    .social-icons{
+        margin-left: 20px;
+    }
+}
+
+/* Small phone from 0 - 480px */
+@media only screen and (max-width:480px){
+    html{
+        font-size: 12px;
+    }
+
+    h2{
+        margin-bottom: 20px;
+        margin-top: 0px;
+    }
+    
+    .family-section .p-long{
+        margin-bottom: 0px;
+    }
+
+    .heading-main-box{
+        transform: translate(-12%, 7%);
+    }
+
+    .fee-box{
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .fee-box li{
+        line-height: 20px;
+    }
+
+    .fee-section, .donate-section{
+        height: 350vw;
+    }
+
+    .testimonials-section{
+        height: 280vw;
+    }
+
+    .sponsors-section h2{
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    .contact-section h2{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+}
