@@ -15,7 +15,6 @@ import java.util.List;
 @RestController
 public class HogiadinhAPI {
 
-
     private final HogiadinhService hogiadinhService;
     private final PhiService phiService;
 
@@ -24,11 +23,6 @@ public class HogiadinhAPI {
         this.phiService = phiService;
     }
 
-    //chức năng thêm hộ gia đình
-//    @PostMapping(value = "/hogiadinh")
-//    public HogiadinhDTO addhogiadinh(@Validated String id, String hotenchuho, int   sonhankhau, String diachi,int trangthai){
-//        return hogiadinhService.addhogiadinh(id, hotenchuho, sonhankhau, diachi, trangthai);
-//    }
     //post, get,put, delete
     @PostMapping(value = "/addhogiadinh")
     public String addhogiadinh(@Validated String id, String hotenchuho, int sonhanhkhau, String diachi){
