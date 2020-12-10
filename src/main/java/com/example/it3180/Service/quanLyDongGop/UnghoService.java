@@ -36,8 +36,8 @@ public class UnghoService implements IUnghoService {
     @Override
     public void updateUngHo(String idCanSua, int soTien) {
         HogiadinhEntity h = hogiadinhRepository.getById(idCanSua);
-        UnghoEntity u = unghoRepository.getByHogiadinh_ungho(h);
-        u.setSotien(soTien);
+            //UnghoEntity u = unghoRepository.getByHogiadinh_ungho(h);
+        //u.setSotien(soTien);
     }
 
     @Override
