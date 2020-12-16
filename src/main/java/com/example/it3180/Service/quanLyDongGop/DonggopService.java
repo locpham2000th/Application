@@ -5,6 +5,7 @@ import com.example.it3180.DTO.quanLyDongGop.DonggopDTO;
 import com.example.it3180.Entity.DonggopEntity;
 import com.example.it3180.Entity.UnghoEntity;
 import com.example.it3180.Repository.DonggopRepository;
+import com.example.it3180.Repository.UnghoRepository;
 import com.example.it3180.Service.quanLyDongGop.IDonggopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,16 +21,25 @@ public class DonggopService implements IDonggopService {
     @Autowired
     private DonggopConverter donggopConverter;
 
+    @Autowired
+    private UnghoRepository unghoRepository;
+
     @Override
-    public DonggopDTO search(Long id) {
-        DonggopEntity d = donggopRepository.getById(id);
-        return donggopConverter.toDTO(d);
+    public DonggopDTO search(String id, String name) {
+        DonggopEntity d1 = donggopRepository.getById(id);
+        DonggopEntity d2 = donggopRepository.getByTenDongGop(name);
+        if(d1 == d2){
+            return donggopConverter.toDTO(d1);
+        }else {
+            return null;
+        }
 
     }
 
     @Override
-    public DonggopDTO addDongGop(String tenDongGop, String mucDich) {
+    public DonggopDTO addDongGop(String id, String tenDongGop, String mucDich) {
         DonggopEntity d = new DonggopEntity();
+        d.setId(id);
         d.setMucdich(mucDich);
         d.setTenDongGop(tenDongGop);
         donggopRepository.save(d);
@@ -37,25 +47,18 @@ public class DonggopService implements IDonggopService {
     }
 
     @Override
-    public int sumEntity() {
-        List<DonggopEntity> d = donggopRepository.findAll();
-        return d.size();
+    public Long countHoGiaDinh(String id) {
+        return unghoRepository.countHoGiaDinh(id);
     }
 
     @Override
-    public int sumMoney() {
-        List<DonggopEntity> d = donggopRepository.findAll();
-        int sum = 0;
-        for(DonggopEntity s : d){
-            for(UnghoEntity u : s.getUngho()){
-                sum = sum + u.getSotien();
-            }
-        }
-        return sum;
+    public Long sumMoney(String id) {
+
+        return unghoRepository.sumMoney(id);
     }
 
     @Override
-    public void update(Long id, String tenDongGop, String mucDich) {
+    public void update(String id, String tenDongGop, String mucDich) {
         DonggopEntity d = donggopRepository.getById(id);
         d.setTenDongGop(tenDongGop);
         d.setMucdich(mucDich);

@@ -9,6 +9,7 @@ public class DonggopConverter {
 
     public DonggopEntity toEntity(DonggopDTO donggopDTO){
         DonggopEntity donggopEntity = new DonggopEntity();
+        donggopEntity.setId(donggopDTO.getId());
         donggopEntity.setMucdich(donggopDTO.getMucdich());
         donggopEntity.setTenDongGop(donggopDTO.getTenDongGop());
         return donggopEntity;
