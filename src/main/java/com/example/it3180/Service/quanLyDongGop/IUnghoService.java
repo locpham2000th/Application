@@ -8,9 +8,7 @@ import java.time.Instant;
 
 public interface IUnghoService {
 
-    void addUngHo(int soTien, long idDongGop, String idHoGiaDinh);
+    void addUngHo(int soTien, String idDongGop, String idHoGiaDinh);
 
-    void updateUngHo(String idCanSua, int soTien);
 
-    void remove(Long id);
 }

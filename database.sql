@@ -33,14 +33,14 @@ create table tra_phi(
 );
 
 create table dong_gop(
-	id varchar(3) not null primary key,
+	id varchar(4) not null primary key,
 	ten_dong_gop nvarchar(20) not null,
 	muc_dich nvarchar(50)
 );
 
 create table ung_ho(
 	id int primary key AUTO_INCREMENT,
-	donggop_id varchar(3) not null,
+	donggop_id varchar(4) not null,
 	hogiadinh_id varchar(5) not null,
 	so_tien int not null,
 	thoi_gian date,

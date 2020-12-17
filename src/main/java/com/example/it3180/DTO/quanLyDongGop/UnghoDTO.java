@@ -9,7 +9,7 @@ public class UnghoDTO {
     private int sotien;
     private Instant thoigian;
     private String hogiadinh_id;
-    private Long donggop_id;
+    private String donggop_id;
 
     public String getHogiadinh_id() {
         return hogiadinh_id;
@@ -19,11 +19,11 @@ public class UnghoDTO {
         this.hogiadinh_id = hogiadinh_id;
     }
 
-    public Long getDonggop_id() {
+    public String getDonggop_id() {
         return donggop_id;
     }
 
-    public void setDonggop_id(Long donggop_id) {
+    public void setDonggop_id(String donggop_id) {
         this.donggop_id = donggop_id;
     }
 

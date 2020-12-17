@@ -6,15 +6,15 @@ import com.example.it3180.Entity.DonggopEntity;
 import java.util.List;
 
 public interface IDonggopService {
-    DonggopDTO search(Long id);
+    DonggopDTO search(String id, String name);
 
-    DonggopDTO addDongGop(String tenDongGop, String mucDich);
+    DonggopDTO addDongGop(String id, String tenDongGop, String mucDich);
 
-    int sumEntity();
+    Long countHoGiaDinh(String id);
 
-    int sumMoney();
+    Long sumMoney(String id);
 
-    void update(Long id, String tenDongGop, String mucDich);
+    void update(String id, String tenDongGop, String mucDich);
 
 
 
