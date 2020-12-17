@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
     <head>
         <title>Add Family</title>
         <link rel="apple-touch-icon" sizes="180x180" href="resources/favicons/apple-touch-icon.png">
@@ -27,14 +27,14 @@
 
         <section class="body-section">
             
-            <form>
+            <form id="form-submit">
                 <h2>Family Information</h2>
                 <div class="row">
                     <div class="col span-1-of-3">
                         <label>Code</label>
                     </div>
-                    <div class="col span-2-of-3">
-                        <input type="text" placeholder="Family Code">
+                    <div class="col span-2-of-3" >
+                        <input id="code" type="text" placeholder="Family Code">
                     </div>
                 </div>
                 <div class="row">
@@ -42,7 +42,7 @@
                         <label>Host Name</label>
                     </div>
                     <div class="col span-2-of-3">
-                        <input type="text" placeholder="Family Owner's Name">
+                        <input id="name" type="text" placeholder="Family Owner's Name">
                     </div>
                 </div>
                 <div class="row">
@@ -50,27 +50,19 @@
                         <label>Number of People</label>
                     </div>
                     <div class="col span-2-of-3">
-                        <input type="text" placeholder="Number of Family members">
+                        <input id="number" type="text" placeholder="Number of Family members">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col span-1-of-3">
-                        <label>Street</label>
+                        <label>Address</label>
                     </div>
                     <div class="col span-2-of-3">
-                        <input type="text" placeholder="Family's Location">
+                        <input id="address" type="text" placeholder="Family's Location">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col span-1-of-3">
-                        <label>District</label>
-                    </div>
-                    <div class="col span-2-of-3">
-                        <input type="text" placeholder="Family's Location">
-                    </div>
-                </div>
-                <div class="row">
-                    <input type="submit" class="btn" value="Add">
+                <div class="row" id="submit">
+                    <input type="button" class="btn" value="Add">
                 </div>
             </form>
         </section>

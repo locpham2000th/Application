@@ -27,14 +27,14 @@
 
         <section class="body-section">
             
-            <form>
+            <form action="/findhogiadinh" method="get">
                 <h2>Family Information</h2>
                 <div class="row">
                     <div class="col span-1-of-3">
                         <label>Code</label>
                     </div>
                     <div class="col span-2-of-3">
-                        <input type="text" placeholder="Family Code">
+                        <input name="id" type="text" placeholder="Family Code" id="code">
                     </div>
                 </div>
                 <div class="row">
@@ -42,7 +42,7 @@
                         <label>Host Name</label>
                     </div>
                     <div class="col span-2-of-3">
-                        <input type="text" placeholder="Family Owner's Name">
+                        <input name="hotenchuho" type="text" placeholder="Family Owner's Name" id="name">
                     </div>
                 </div>
                 <div class="row">
@@ -50,11 +50,11 @@
                         <label>Street</label>
                     </div>
                     <div class="col span-2-of-3">
-                        <input type="text" placeholder="Family's Location">
+                        <input name="street" type="text" placeholder="Family's Location" id="street">
                     </div>
                 </div>
                 <div class="row">
-                    <a href="/familysearchresult" class="btn">Search</a>
+                    <input  class="btn" id="submit" type="submit" value="Search" ></input>
                 </div>
             </form>
         </section>
@@ -62,7 +62,7 @@
         <section class="end-section">
             <div class="row">
                 <a href="/" class="btn">Back</a>
-                <a href="#" class="btn">Show All</a>    
+                <a href="/findhogiadinh?id=&hotenchuho=&street=" class="btn showAll">Show All</a>
             </div>
         </section>
 

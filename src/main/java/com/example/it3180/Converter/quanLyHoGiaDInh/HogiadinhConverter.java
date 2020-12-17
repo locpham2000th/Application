@@ -10,7 +10,7 @@ public class HogiadinhConverter {
     public HogiadinhEntity toEntity(HogiadinhDTO hogiadinhDTO){
         HogiadinhEntity hogiadinhEntity = new HogiadinhEntity();
         hogiadinhEntity.setId(hogiadinhDTO.getId());
-        hogiadinhEntity.setDiachi(hogiadinhDTO.getDiachi());
+        hogiadinhEntity.setDiaChi(hogiadinhDTO.getDiachi());
         hogiadinhEntity.setHoTenChuHo(hogiadinhDTO.getHoTenChuHo());
         hogiadinhEntity.setSoNhanKhau(hogiadinhDTO.getSoNhanKhau());
         hogiadinhEntity.setThoiGianDen(hogiadinhDTO.getThoiGianDen());
@@ -22,7 +22,7 @@ public class HogiadinhConverter {
     public HogiadinhDTO toDTO(HogiadinhEntity hogiadinhEntity){
         HogiadinhDTO hogiadinhDTO = new HogiadinhDTO();
         hogiadinhDTO.setId(hogiadinhEntity.getId());
-        hogiadinhDTO.setDiachi(hogiadinhEntity.getDiachi());
+        hogiadinhDTO.setDiachi(hogiadinhEntity.getDiaChi());
         hogiadinhDTO.setHoTenChuHo(hogiadinhEntity.getHoTenChuHo());
         hogiadinhDTO.setSoNhanKhau(hogiadinhEntity.getSoNhanKhau());
         hogiadinhDTO.setThoiGianDen(hogiadinhEntity.getThoiGianDen());

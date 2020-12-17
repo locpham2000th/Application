@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
     <head>
         <title>Family Profile</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="resources/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="resources/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="resources/favicons/favicon-16x16.png">
-        <link rel="manifest" href="resources/favicons/site.webmanifest">
-        <link rel="mask-icon" href="resources/favicons/safari-pinned-tab.svg" color="#5bbad5">
-        <link rel="shortcut icon" href="resources/favicons/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="../resources/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../resources/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../resources/favicons/favicon-16x16.png">
+        <link rel="manifest" href="../resources/favicons/site.webmanifest">
+        <link rel="mask-icon" href="../resources/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="../resources/favicons/favicon.ico">
         <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="msapplication-config" content="resources/favicons/browserconfig.xml">
+        <meta name="msapplication-config" content="../resources/favicons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
         <script src="https://kit.fontawesome.com/bbf0daf20d.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="vendors/css/grid.css">
-        <link rel="stylesheet" href="resources/css/familyprofile.css">
+        <link rel="stylesheet" href="../vendors/css/grid.css">
+        <link rel="stylesheet" href="../resources/css/familyprofile.css">
     </head>
     <body>
         <header>
             <nav class="header-nav">
-                <a href="/"><img class="logo" src="resources/img/logo.png" alt="logo-familyinformation"></a>
-                <h2>Trần Thế Anh</h2>   <!--Thay đổi theo hộ-->
+                <a href="/"><img class="logo" src="../resources/img/logo.png" alt="logo-familyinformation"></a>
+                <h2 class="nametitle" th:text="${profile.HoTenChuHo}">Trần Thế Anh</h2>   <!--Thay đổi theo hộ-->
             </nav>
             <div class="clearfix"></div>
             <section class="header-section">
                 <div class="row">
-                    <img src="resources/img/family-background.jpg" alt="family-background-image">
-                    <img src="resources/img/family-avatar.jpg" alt="family-avatar">
+                    <img src="../resources/img/family-background.jpg" alt="family-background-image">
+                    <img src="../resources/img/family-avatar.jpg" alt="family-avatar">
                 </div>
             </section>
 
@@ -40,7 +40,7 @@
                         <div class="col span-1-of-3">
                             ID: 
                         </div>
-                        <div class="col span-2-of-3" id="test">
+                        <div th:text="${profile.id}" class="col span-2-of-3 code" >
                             H0001   <!--Thay đổi theo hộ-->
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                         <div class="col span-1-of-3">
                             Host Name: 
                         </div>
-                        <div class="col span-2-of-3">
+                        <div th:text="${profile.HoTenChuHo}" class="col span-2-of-3 edit name">
                             Trần Thế Anh    <!--Thay đổi theo hộ-->
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                         <div class="col span-1-of-3">
                             Family Members: 
                         </div>
-                        <div class="col span-2-of-3">
+                        <div th:text="${profile.SoNhanKhau}" class="col span-2-of-3 edit member">
                             4   <!--Thay đổi theo hộ-->
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                         <div class="col span-1-of-3">
                             Address: 
                         </div>
-                        <div class="col span-2-of-3">
+                        <div th:text="${profile.Diachi}" class="col span-2-of-3 edit address">
                             Giải Phóng Street, Hanoi City   <!--Thay đổi theo hộ-->
                         </div>
                     </div>
@@ -72,10 +72,13 @@
                         <div class="col span-1-of-3">
                             State: 
                         </div>
-                        <div class="col span-2-of-3">
+                        <div th:text="${state}" class="col span-2-of-3">
                             Living   <!--Thay đổi theo hộ-->
                         </div>
                     </div>
+<!--                    <div class="confirm" style="display: none">-->
+<!--                        <input class="btn btnconfirm" type="button" value="Confirm">-->
+<!--                    </div>-->
                 </div>
 
                 <div class="col span-1-of-2">
@@ -83,35 +86,35 @@
                         <h3>Option</h3>
                         <div class="row">
                             
-                            <input class="btn" type="submit" value="Edit">
-                            <input class="btn" type="submit" value="Remove">
+                            <input class="btn btnEdit" type="button" value="Edit" id="edit">
+                            <input class="btn" type="button" value="Remove" id="remove">
                         </div>
                     </div>
 
                     <div class="statistics-section">
                         <h3>Statistics</h3>
                         <div class="row">
-                            <div class="col span-2-of-3">
+                            <div  class="col span-2-of-3">
                                 Unpaid Fee:
                             </div>
-                            <div class="col span-1-of-3">
-                                3   <!--Thay đổi theo hộ-->
+                            <div th:text="${unpaidFee}" class="col span-1-of-3">
+                                  <!--Thay đổi theo hộ-->
                             </div>
                         </div>
                         <div class="row">
                             <div class="col span-2-of-3">
                                 Paid Fee:
                             </div>
-                            <div class="col span-1-of-3">
-                                2   <!--Thay đổi theo hộ-->
+                            <div th:text="${paidFee}" class="col span-1-of-3">
+                                   <!--Thay đổi theo hộ-->
                             </div>
                         </div>
                         <div class="row">
                             <div class="col span-2-of-3">
                                 Total Donation (VND):
                             </div>
-                            <div class="col span-1-of-3">
-                                200.000 <!--Thay đổi theo hộ-->
+                            <div th:text="${total}" class="col span-1-of-3">
+                                 <!--Thay đổi theo hộ-->
                             </div>
                         </div>
                     </div>
@@ -123,8 +126,8 @@
         
 
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-        <script src="vendors/js/jquery.waypoints.min.js"></script>
-        <script type="text/javascript" src="resources/js/familyprofile.js"></script>
+        <script src="../vendors/js/jquery.waypoints.min.js"></script>
+        <script type="text/javascript" src="../resources/js/familyprofile.js"></script>
     </body>
 
 </html>

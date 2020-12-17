@@ -19,7 +19,7 @@ public class HogiadinhEntity {
     private int SoNhanKhau;
 
     @Column(name = "dia_chi")
-    private String diachi;
+    private String diaChi;
 
     @Column(name = "trang_thai")
     private int TrangThai;
@@ -60,12 +60,12 @@ public class HogiadinhEntity {
         SoNhanKhau = soNhanKhau;
     }
 
-    public String getDiachi() {
-        return diachi;
+    public String getDiaChi() {
+        return diaChi;
     }
 
-    public void setDiachi(String diachi) {
-        diachi = diachi;
+    public void setDiaChi(String diaChi) {
+        this.diaChi = diaChi;
     }
 
     public int getTrangThai() {

@@ -128,11 +128,16 @@
                     <div class="fee-box">
                         <h3>Seach donate</h3>
                         <p class="fee-box-text">Fill in the form below</p>
-                        <ul>
-                            <li>Code: <input type="text" placeholder="Donate code"></li>
-                            <li>Name: <input type="text" placeholder="Donate name"></li>
-                        </ul>
-                        <a href="/donatesearchresult" class="btn">Search</a>
+                        <form action="/input" method="get" >
+                            <div>Code: <input type="text" placeholder="Donate code" name="tenDongGop" > </div>
+                            <div>Name: <input type="text" placeholder="Donate name" name="mucDich" > </div>
+                            <input type="button" value="Search" class="btn" >
+                        </form>
+<!--                        <ul>-->
+<!--                            <li>Code: <input type="text" placeholder="Donate code" class="donatCode"></li>-->
+<!--                            <li>Name: <input type="text" placeholder="Donate name" class="donatName"></li>-->
+<!--                        </ul>-->
+<!--                        <a href="/donatesearchresult" class="btn">Search</a>-->
                     </div>
                 </div>
                 <div class="col span-1-of-3">

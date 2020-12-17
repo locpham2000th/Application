@@ -7,7 +7,7 @@ import java.util.List;
 public interface IHogiadinhServer {
 
     String addhogiadinh(String id, String hotenchuho, int sonhankhau, String diachi,int trangthai);
-    HogiadinhDTO edithogiadinh(String id, String hotenchuho, int sonhankhau, String diachi, int trangthai);
+    HogiadinhDTO edithogiadinh(String id, String hotenchuho, int sonhankhau, String diachi);
     String deletehogiadinh(String id);
     List<HogiadinhDTO> showhogiadinhByname(String hotenchuho);
     List<HogiadinhDTO> showHogiadinhByDiachi(String diachi);

@@ -1,10 +1,13 @@
 package com.example.it3180.API;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+@RequestMapping
 public class controller {
 
     @RequestMapping(value = "/")
@@ -14,7 +17,7 @@ public class controller {
         return modelAndView;
     }
 
-    @RequestMapping(value = "/searchfamily")
+    @GetMapping(value = "/searchfamily")
     public ModelAndView searchfamily(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("searchfamily");
@@ -37,8 +40,8 @@ public class controller {
 
     @RequestMapping(value = "/feesearchresult")
     public ModelAndView feesearchresult(){
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("feesearchresult");
+        ModelAndView modelAndView = new ModelAndView("feesearchresult");
+        modelAndView.addObject("aa", "bbbb");
         return modelAndView;
     }
 

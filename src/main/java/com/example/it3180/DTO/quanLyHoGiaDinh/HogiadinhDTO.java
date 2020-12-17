@@ -12,6 +12,15 @@ public class HogiadinhDTO {
     private int TrangThai;
     private Instant ThoiGianDen;
     private Instant ThoiGianRoiDi;
+    private String link;
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
 
     public String getId() {
         return id;
