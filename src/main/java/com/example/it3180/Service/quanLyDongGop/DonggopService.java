@@ -28,6 +28,9 @@ public class DonggopService implements IDonggopService {
     public DonggopDTO search(String id, String name) {
         DonggopEntity d1 = donggopRepository.getById(id);
         DonggopEntity d2 = donggopRepository.getByTenDongGop(name);
+        if(d1 == null && d2 == null){
+            return null;
+        }
         if(d1 == d2){
             return donggopConverter.toDTO(d1);
         }else {

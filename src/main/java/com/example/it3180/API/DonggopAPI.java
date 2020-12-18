@@ -22,7 +22,7 @@ public class DonggopAPI {
         return donggopService.search(id, name);
     }
 
-    @GetMapping(value = "/input")
+    @PostMapping(value = "/input")
     public DonggopDTO DonggopDTO(@Validated String id, String tenDongGop, String mucDich){
         return donggopService.addDongGop(id, tenDongGop,mucDich);
     }
