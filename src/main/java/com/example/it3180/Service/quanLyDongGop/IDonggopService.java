@@ -6,7 +6,7 @@ import com.example.it3180.Entity.DonggopEntity;
 import java.util.List;
 
 public interface IDonggopService {
-    DonggopDTO search(String id, String name);
+    List<DonggopDTO> search(String id, String name);
 
     DonggopDTO addDongGop(String id, String tenDongGop, String mucDich);
 

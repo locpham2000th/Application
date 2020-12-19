@@ -7,9 +7,12 @@ import com.example.it3180.Entity.UnghoEntity;
 import com.example.it3180.Repository.DonggopRepository;
 import com.example.it3180.Repository.UnghoRepository;
 import com.example.it3180.Service.quanLyDongGop.IDonggopService;
+import org.hibernate.query.criteria.internal.expression.function.AggregationFunction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.TypedQuery;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -25,17 +28,34 @@ public class DonggopService implements IDonggopService {
     private UnghoRepository unghoRepository;
 
     @Override
-    public DonggopDTO search(String id, String name) {
-        DonggopEntity d1 = donggopRepository.getById(id);
-        DonggopEntity d2 = donggopRepository.getByTenDongGop(name);
-        if(d1 == null && d2 == null){
+    public List<DonggopDTO>  search(String id, String name) {
+        if(id == null && name == null){
             return null;
         }
-        if(d1 == d2){
-            return donggopConverter.toDTO(d1);
-        }else {
-            return null;
+        List<DonggopDTO> DTO = new ArrayList<>();
+        if(id == null){
+            List<DonggopEntity> d = donggopRepository.getByTenDongGop(name);
+            for (DonggopEntity donggopEntity : d) {
+                DTO.add(donggopConverter.toDTO(donggopEntity));
+            }
+
+        }if(name == null){
+            List<DonggopEntity> d = donggopRepository.getByIdDongGop(id);
+            for (DonggopEntity donggopEntity : d) {
+                DTO.add(donggopConverter.toDTO(donggopEntity));
+            }
+        }else{
+            List<DonggopEntity> d1 = donggopRepository.getByTenDongGop(name);
+            List<DonggopEntity> d2 = donggopRepository.getByIdDongGop(id);
+            int max = Math.max(d1.size(), d2.size());
+            for(int i = 0; i < max; i++) {
+                if (d1.get(i) == d2.get(i)) {
+                    DTO.add(donggopConverter.toDTO(d1.get(i)));
+                }
+            }
         }
+        if(DTO.size() == 0) return  null;
+        else return DTO;
 
     }
 

@@ -9,6 +9,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class DonggopAPI {
     @Autowired
@@ -18,7 +20,7 @@ public class DonggopAPI {
     private UnghoService unghoService;
 
     @PostMapping(value = "/search")
-    public DonggopDTO DonggopDTO (@Validated String id, String name){
+    public List<DonggopDTO> DonggopDTO (@Validated String id, String name){
         return donggopService.search(id, name);
     }
 
