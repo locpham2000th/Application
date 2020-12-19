@@ -131,5 +131,9 @@ public class HogiadinhService implements IHogiadinhServer {
         return hogiadinhConverter.toDTO(hogiadinhEntity);
     }
 
+    @Override
+    public Long countFamily() {
+        return hogiadinhRepository.countFamily();
+    }
 
 }

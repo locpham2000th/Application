@@ -24,4 +24,7 @@ public interface HogiadinhRepository extends JpaRepository<HogiadinhEntity, Stri
     @Query(value = "select sum(p.DonGia)from HogiadinhEntity h left join TraphiEntity t on h.id = t.hogiadinh_traphi left join PhiEntity p on p.id = t.phi_traphi where h.id = ?1")
     Long countTotal(String id);
 
+    @Query(value = "select count(h.id) from HogiadinhEntity h")
+    Long countFamily();
+
 }

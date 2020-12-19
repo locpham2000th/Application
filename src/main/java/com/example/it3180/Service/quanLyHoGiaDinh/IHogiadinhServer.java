@@ -17,4 +17,8 @@ public interface IHogiadinhServer {
 
     Long counttotal(String id);
 
+    Long countFamily();
+
+
+
 }
