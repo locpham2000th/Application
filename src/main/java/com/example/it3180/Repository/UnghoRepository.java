@@ -13,9 +13,9 @@ public interface UnghoRepository extends JpaRepository<UnghoEntity, Long> {
     @Query(value = "select u from UnghoEntity u where u.donggop_ungho.id like %?1%")
     UnghoEntity findUngHo(String idDongGop);
 
-    @Query(value = "select count(u.hogiadinh_ungho.id) from UnghoEntity u where u.donggop_ungho.id like %?1%")
+    @Query(value = "select count(u.hogiadinh_ungho.id) from UnghoEntity u where u.donggop_ungho.id = ?1 ")
     Long countHoGiaDinh(String id);
 
-    @Query(value = "select sum(u.sotien) from UnghoEntity u where u.donggop_ungho.id like %?1%")
+    @Query(value = "select sum(u.sotien) from UnghoEntity u where u.donggop_ungho.id = ?1 ")
     Long sumMoney(String id);
 }
