@@ -17,6 +17,11 @@ public class DonggopEntity {
     @Column(name = "muc_dich")
     private String Mucdich;
 
+    @Column(name = "note")
+    private String note;
+
+
+
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "donggop_ungho")
     private List<UnghoEntity> ungho = new ArrayList<>();
 
@@ -50,5 +55,13 @@ public class DonggopEntity {
 
     public void setUngho(List<UnghoEntity> ungho) {
         this.ungho = ungho;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
     }
 }

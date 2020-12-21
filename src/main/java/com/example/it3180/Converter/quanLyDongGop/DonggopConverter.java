@@ -12,6 +12,7 @@ public class DonggopConverter {
         donggopEntity.setId(donggopDTO.getId());
         donggopEntity.setMucdich(donggopDTO.getMucdich());
         donggopEntity.setTenDongGop(donggopDTO.getTenDongGop());
+        donggopEntity.setNote(donggopDTO.getNote());
         return donggopEntity;
     }
 
@@ -20,6 +21,7 @@ public class DonggopConverter {
         donggopDTO.setId(donggopEntity.getId());
         donggopDTO.setMucdich(donggopEntity.getMucdich());
         donggopDTO.setTenDongGop(donggopEntity.getTenDongGop());
+        donggopDTO.setNote(donggopEntity.getNote());
         return donggopDTO;
     }
 

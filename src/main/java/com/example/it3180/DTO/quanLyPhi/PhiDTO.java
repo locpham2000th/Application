@@ -10,6 +10,7 @@ public class PhiDTO {
     private Instant ThoiGianThu;
     private int DonGia;
     private String MucDich;
+    private String link;
 
     public String getId() {
         return id;
@@ -49,5 +50,13 @@ public class PhiDTO {
 
     public void setMucDich(String mucDich) {
         MucDich = mucDich;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 }

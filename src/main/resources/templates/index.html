@@ -86,11 +86,11 @@
                     <div class="fee-box">
                         <h3>Search fee</h3>
                         <p class="fee-box-text">Fill in the form below</p>
-                        <ul>
-                            <li>Code: <input type="text" placeholder="Fee code"></li>
-                            <li>Name: <input type="text" placeholder="Fee name"></li>
-                        </ul>
-                        <a href="/feesearchresult" class="btn">Search</a>
+                        <form action="/findfeebyall" method="get">
+                            <div>Code: <input type="text" placeholder="Fee code" name="code"></div>
+                            <div>Name: <input type="text" placeholder="Fee name" name="name"></div>
+                            <input type="submit" class="btn" value="Search">
+                        </form>
                     </div>
                 </div>
                 <div class="col span-1-of-3">
@@ -98,12 +98,12 @@
                         <h3>Add fee</h3>
                         <p class="fee-box-text">Fill in the form below</p>
                         <ul>
-                            <li>Code: <input type="text" placeholder="Fee code"></li>
-                            <li>Name: <input type="text" placeholder="Fee name"></li>
-                            <li>Amount: <input type="text" placeholder="Amount of money"></li>
-                            <li>Purpose: <input type="text" placeholder="Purpose"></li>
+                            <li>Code: <input type="text" placeholder="Fee code" class="idFee"></li>
+                            <li>Name: <input type="text" placeholder="Fee name" class="nameFee"></li>
+                            <li>Amount: <input type="text" placeholder="Amount of money" class="amountFee"></li>
+                            <li>Purpose: <input type="text" placeholder="Purpose" class="purposeFee"></li>
                         </ul>
-                        <a href="#" class="btn">Add</a>
+                        <input type="button" class="btn addFee" value="Add">
                     </div>
                 </div>
                 <div class="col span-1-of-3">
@@ -128,10 +128,10 @@
                     <div class="fee-box">
                         <h3>Seach donate</h3>
                         <p class="fee-box-text">Fill in the form below</p>
-                        <form action="/input" method="get" >
-                            <div>Code: <input type="text" placeholder="Donate code" name="tenDongGop" > </div>
-                            <div>Name: <input type="text" placeholder="Donate name" name="mucDich" > </div>
-                            <input type="button" value="Search" class="btn" >
+                        <form action="/search" method="get" >
+                            <div>Code: <input type="text" placeholder="Donate code" name="id" > </div>
+                            <div>Name: <input type="text" placeholder="Donate name" name="tenDongGop" > </div>
+                            <input type="submit" value="Search" class="btn" >
                         </form>
 <!--                        <ul>-->
 <!--                            <li>Code: <input type="text" placeholder="Donate code" class="donatCode"></li>-->
@@ -145,12 +145,12 @@
                         <h3>Add donate</h3>
                         <p class="fee-box-text">Fill in the form below</p>
                         <ul>
-                            <li>Code: <input type="text" placeholder="Donate code"></li>
-                            <li>Name: <input type="text" placeholder="Donate name"></li>
-                            <li>Purpose: <input type="text" placeholder="Purpose"></li>
-                            <li>Note: <input type="text" placeholder="Note"></li>
+                            <li>Code: <input type="text" placeholder="Donate code" class="idDonate"></li>
+                            <li>Name: <input type="text" placeholder="Donate name" class="nameDonate"></li>
+                            <li>Purpose: <input type="text" placeholder="Purpose" class="purposeDonate"></li>
+                            <li>Note: <input type="text" placeholder="Note" class="noteDonate"></li>
                         </ul>
-                        <a href="#" class="btn">Add</a>
+                        <input type="button" class="btn addDonate" value="ADD">
                     </div>
                 </div>
                 <div class="col span-1-of-3">

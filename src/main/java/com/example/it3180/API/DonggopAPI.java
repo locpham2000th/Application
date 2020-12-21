@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -19,16 +20,31 @@ public class DonggopAPI {
     @Autowired
     private UnghoService unghoService;
 
-    @PostMapping(value = "/search")
-    public List<DonggopDTO> DonggopDTO (@Validated String id, String name){
-        return donggopService.search(id, name);
+    @GetMapping(value = "/search")
+    public ModelAndView DonggopDTO (@RequestParam(name = "id") String id,@RequestParam(name = "tenDongGop") String name){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("donatesearchresult");
+        List<DonggopDTO> donggopDTOS = donggopService.search(id, name);
+        modelAndView.addObject("resultsDonate",donggopDTOS);
+        return modelAndView;
     }
 
     @PostMapping(value = "/input")
-    public DonggopDTO DonggopDTO(@Validated String id, String tenDongGop, String mucDich){
-        return donggopService.addDongGop(id, tenDongGop,mucDich);
+    public DonggopDTO DonggopDTO(@Validated String id, String tenDongGop, String mucDich,String note){
+        return donggopService.addDongGop(id, tenDongGop,mucDich,note);
     }
-    @GetMapping(value = "/countHoGiaDinh/{id}")
+
+    @GetMapping(value = "/in4Donate/{id}")
+    public ModelAndView showIn4(@PathVariable String id){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("donateprofile");
+        modelAndView.addObject("profileDonate", donggopService.showIn4(id));
+        modelAndView.addObject("sumMoney",donggopService.sumMoney(id));
+        modelAndView.addObject("countHoGiaDinh", donggopService.countHoGiaDinh(id));
+        return modelAndView;
+    }
+
+        @GetMapping(value = "/countHoGiaDinh/{id}")
     public Long countHoGiaDinh(@PathVariable String id){
         return donggopService.countHoGiaDinh(id);
     }

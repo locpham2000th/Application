@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
     <head>
         <title>Result</title>
         <link rel="apple-touch-icon" sizes="180x180" href="resources/favicons/apple-touch-icon.png">
@@ -32,126 +32,126 @@
                 </div>
             </div>
             <ul class="list">
-                <li class="tuple">
-                    <a href="/donateprofile">
+                <li th:each="result : ${resultsDonate}" class="tuple">
+                    <a th:href="${result.link}">
                         <div class="row">
                             <div class="col span-1-of-3">
-                                <h5 class="family-code">D001</h5>
+                                <h5 class="family-code" th:text="${result.id}">D001</h5>
                             </div>
                             <div class="col span-2-of-3">
-                                <h5 class="host-name">Ủng hộ đồng bảo miền Trung</h5>
+                                <h5 class="host-name" th:text="${result.TenDongGop}">Ủng hộ đồng bảo miền Trung</h5>
                             </div>
                         </div>
                     </a>
                 </li>
-                <li class="tuple">
-                    <a href="/donateprofile">
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <h5 class="family-code">D001</h5>
-                            </div>
-                            <div class="col span-2-of-3">
-                                <h5 class="host-name">Ủng hộ đồng bảo miền Trung</h5>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="tuple">
-                    <a href="/donateprofile">
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <h5 class="family-code">D001</h5>
-                            </div>
-                            <div class="col span-2-of-3">
-                                <h5 class="host-name">Ủng hộ đồng bảo miền Trung</h5>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="tuple">
-                    <a href="/donateprofile">
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <h5 class="family-code">D001</h5>
-                            </div>
-                            <div class="col span-2-of-3">
-                                <h5 class="host-name">Ủng hộ đồng bảo miền Trung</h5>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="tuple">
-                    <a href="/donateprofile">
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <h5 class="family-code">D001</h5>
-                            </div>
-                            <div class="col span-2-of-3">
-                                <h5 class="host-name">Ủng hộ đồng bảo miền Trung</h5>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="tuple">
-                    <a href="/donateprofile">
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <h5 class="family-code">D001</h5>
-                            </div>
-                            <div class="col span-2-of-3">
-                                <h5 class="host-name">Ủng hộ đồng bảo miền Trung</h5>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="tuple">
-                    <a href="/donateprofile">
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <h5 class="family-code">D001</h5>
-                            </div>
-                            <div class="col span-2-of-3">
-                                <h5 class="host-name">Ủng hộ đồng bảo miền Trung</h5>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="tuple">
-                    <a href="/donateprofile">
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <h5 class="family-code">D001</h5>
-                            </div>
-                            <div class="col span-2-of-3">
-                                <h5 class="host-name">Ủng hộ đồng bảo miền Trung</h5>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="tuple">
-                    <a href="/donateprofile">
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <h5 class="family-code">D001</h5>
-                            </div>
-                            <div class="col span-2-of-3">
-                                <h5 class="host-name">Ủng hộ đồng bảo miền Trung</h5>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="tuple">
-                    <a href="/donateprofile">
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <h5 class="family-code">D001</h5>
-                            </div>
-                            <div class="col span-2-of-3">
-                                <h5 class="host-name">Ủng hộ đồng bảo miền Trung</h5>
-                            </div>
-                        </div>
-                    </a>
-                </li>
+<!--                <li class="tuple">-->
+<!--                    <a href="/donateprofile">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="family-code">D001</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-2-of-3">-->
+<!--                                <h5 class="host-name">Ủng hộ đồng bảo miền Trung</h5>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="tuple">-->
+<!--                    <a href="/donateprofile">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="family-code">D001</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-2-of-3">-->
+<!--                                <h5 class="host-name">Ủng hộ đồng bảo miền Trung</h5>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="tuple">-->
+<!--                    <a href="/donateprofile">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="family-code">D001</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-2-of-3">-->
+<!--                                <h5 class="host-name">Ủng hộ đồng bảo miền Trung</h5>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="tuple">-->
+<!--                    <a href="/donateprofile">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="family-code">D001</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-2-of-3">-->
+<!--                                <h5 class="host-name">Ủng hộ đồng bảo miền Trung</h5>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="tuple">-->
+<!--                    <a href="/donateprofile">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="family-code">D001</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-2-of-3">-->
+<!--                                <h5 class="host-name">Ủng hộ đồng bảo miền Trung</h5>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="tuple">-->
+<!--                    <a href="/donateprofile">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="family-code">D001</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-2-of-3">-->
+<!--                                <h5 class="host-name">Ủng hộ đồng bảo miền Trung</h5>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="tuple">-->
+<!--                    <a href="/donateprofile">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="family-code">D001</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-2-of-3">-->
+<!--                                <h5 class="host-name">Ủng hộ đồng bảo miền Trung</h5>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="tuple">-->
+<!--                    <a href="/donateprofile">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="family-code">D001</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-2-of-3">-->
+<!--                                <h5 class="host-name">Ủng hộ đồng bảo miền Trung</h5>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="tuple">-->
+<!--                    <a href="/donateprofile">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="family-code">D001</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-2-of-3">-->
+<!--                                <h5 class="host-name">Ủng hộ đồng bảo miền Trung</h5>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
                 
             </ul>
         </section>

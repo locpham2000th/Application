@@ -8,7 +8,7 @@ import java.util.List;
 public interface IDonggopService {
     List<DonggopDTO> search(String id, String name);
 
-    DonggopDTO addDongGop(String id, String tenDongGop, String mucDich);
+    DonggopDTO addDongGop(String id, String tenDongGop, String mucDich,String note);
 
     Long countHoGiaDinh(String id);
 
@@ -16,6 +16,7 @@ public interface IDonggopService {
 
     void update(String id, String tenDongGop, String mucDich);
 
+    DonggopDTO showIn4(String id);
 
 
 }

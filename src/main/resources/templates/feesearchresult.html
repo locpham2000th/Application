@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
     <head>
         <title>Result</title>
         <link rel="apple-touch-icon" sizes="180x180" href="resources/favicons/apple-touch-icon.png">
@@ -35,141 +35,141 @@
                 </div>
             </div>
             <ul class="list">
-                <li class="tuple">
-                    <a href="/feeprofile">
+                <li th:each="result : ${resultFee}" class="tuple">
+                    <a th:href="${result.link}">
                         <div class="row">
                             <div class="col span-1-of-3">
-                                <h5 class="family-code">F001</h5>
+                                <h5 class="family-code" th:text="${result.id}">F001</h5>
                             </div>
                             <div class="col span-1-of-3">
-                                <h5 class="host-name">Phí vệ sinh</h5>
+                                <h5 class="host-name" th:text="${result.TenPhi}">Phí vệ sinh</h5>
                             </div>
                             <div class="col span-1-of-3">
-                                <h5 class="number-of-members">50.000</h5>
+                                <h5 class="number-of-members" th:text="${result.DonGia}">50.000</h5>
                             </div>
                         </div>
                     </a>
                 </li>
-                <li class="tuple">
-                    <a href="/feeprofile">
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <h5 class="family-code">F001</h5>
-                            </div>
-                            <div class="col span-1-of-3">
-                                <h5 class="host-name">Phí vệ sinh</h5>
-                            </div>
-                            <div class="col span-1-of-3">
-                                <h5 class="number-of-members">50.000</h5>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="tuple">
-                    <a href="/feeprofile">
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <h5 class="family-code">F001</h5>
-                            </div>
-                            <div class="col span-1-of-3">
-                                <h5 class="host-name">Phí vệ sinh</h5>
-                            </div>
-                            <div class="col span-1-of-3">
-                                <h5 class="number-of-members">50.000</h5>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="tuple">
-                    <a href="/feeprofile">
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <h5 class="family-code">F001</h5>
-                            </div>
-                            <div class="col span-1-of-3">
-                                <h5 class="host-name">Phí vệ sinh</h5>
-                            </div>
-                            <div class="col span-1-of-3">
-                                <h5 class="number-of-members">50.000</h5>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="tuple">
-                    <a href="/feeprofile">
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <h5 class="family-code">F001</h5>
-                            </div>
-                            <div class="col span-1-of-3">
-                                <h5 class="host-name">Phí vệ sinh</h5>
-                            </div>
-                            <div class="col span-1-of-3">
-                                <h5 class="number-of-members">50.000</h5>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="tuple">
-                    <a href="/feeprofile">
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <h5 class="family-code">F001</h5>
-                            </div>
-                            <div class="col span-1-of-3">
-                                <h5 class="host-name">Phí vệ sinh</h5>
-                            </div>
-                            <div class="col span-1-of-3">
-                                <h5 class="number-of-members">50.000</h5>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="tuple">
-                    <a href="/feeprofile">
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <h5 class="family-code">F001</h5>
-                            </div>
-                            <div class="col span-1-of-3">
-                                <h5 class="host-name">Phí vệ sinh</h5>
-                            </div>
-                            <div class="col span-1-of-3">
-                                <h5 class="number-of-members">50.000</h5>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="tuple">
-                    <a href="/feeprofile">
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <h5 class="family-code">F001</h5>
-                            </div>
-                            <div class="col span-1-of-3">
-                                <h5 class="host-name">Phí vệ sinh</h5>
-                            </div>
-                            <div class="col span-1-of-3">
-                                <h5 class="number-of-members">50.000</h5>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="tuple">
-                    <a href="/feeprofile">
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <h5 class="family-code">F001</h5>
-                            </div>
-                            <div class="col span-1-of-3">
-                                <h5 class="host-name">Phí vệ sinh</h5>
-                            </div>
-                            <div class="col span-1-of-3">
-                                <h5 class="number-of-members">50.000</h5>
-                            </div>
-                        </div>
-                    </a>
-                </li>
+<!--                <li class="tuple">-->
+<!--                    <a href="/feeprofile">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="family-code">F001</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="host-name">Phí vệ sinh</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="number-of-members">50.000</h5>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="tuple">-->
+<!--                    <a href="/feeprofile">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="family-code">F001</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="host-name">Phí vệ sinh</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="number-of-members">50.000</h5>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="tuple">-->
+<!--                    <a href="/feeprofile">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="family-code">F001</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="host-name">Phí vệ sinh</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="number-of-members">50.000</h5>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="tuple">-->
+<!--                    <a href="/feeprofile">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="family-code">F001</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="host-name">Phí vệ sinh</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="number-of-members">50.000</h5>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="tuple">-->
+<!--                    <a href="/feeprofile">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="family-code">F001</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="host-name">Phí vệ sinh</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="number-of-members">50.000</h5>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="tuple">-->
+<!--                    <a href="/feeprofile">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="family-code">F001</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="host-name">Phí vệ sinh</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="number-of-members">50.000</h5>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="tuple">-->
+<!--                    <a href="/feeprofile">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="family-code">F001</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="host-name">Phí vệ sinh</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="number-of-members">50.000</h5>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="tuple">-->
+<!--                    <a href="/feeprofile">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="family-code">F001</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="host-name">Phí vệ sinh</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col span-1-of-3">-->
+<!--                                <h5 class="number-of-members">50.000</h5>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </li>-->
                 
             </ul>
         </section>
