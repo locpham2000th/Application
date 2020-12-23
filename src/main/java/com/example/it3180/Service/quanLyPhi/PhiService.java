@@ -78,6 +78,7 @@ public class PhiService implements IPhiService {
         List<PhiEntity> phiEntities = phiRepository.findFeeByAll(code, name);
         for(int i = 0; i < phiEntities.size(); i++){
             phiDTOS.add(phiConverter.toDTO(phiEntities.get(i)));
+            phiDTOS.get(i).setLink("/in4Fee/" + phiDTOS.get(i).getId());
         }
 
         return phiDTOS;

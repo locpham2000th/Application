@@ -28,43 +28,51 @@ public class DonggopService implements IDonggopService {
     private UnghoRepository unghoRepository;
 
     @Override
-    public List<DonggopDTO>  search(String id, String name) {
-        if(id == null && name == null){
-            return null;
+    public List<DonggopDTO> search(String id, String name) {
+        List<DonggopEntity> donggopEntities = donggopRepository.findAllByTenDongGopAndId(id,name);
+        List<DonggopDTO> donggopDTOS = new ArrayList<>();
+        for(int i = 0; i < donggopEntities.size(); i++){
+            donggopDTOS.add(donggopConverter.toDTO(donggopEntities.get(i)));
+            donggopDTOS.get(i).setLink("/in4Donate/" + donggopDTOS.get(i).getId());
         }
-        List<DonggopDTO> DTO = new ArrayList<>();
-        if(id == null){
-            List<DonggopEntity> d = donggopRepository.getByTenDongGop(name);
-            for (DonggopEntity donggopEntity : d) {
-                DTO.add(donggopConverter.toDTO(donggopEntity));
-            }
-
-        }if(name == null){
-            List<DonggopEntity> d = donggopRepository.getByIdDongGop(id);
-            for (DonggopEntity donggopEntity : d) {
-                DTO.add(donggopConverter.toDTO(donggopEntity));
-            }
-        }else{
-            List<DonggopEntity> d1 = donggopRepository.getByTenDongGop(name);
-            List<DonggopEntity> d2 = donggopRepository.getByIdDongGop(id);
-            int max = Math.max(d1.size(), d2.size());
-            for(int i = 0; i < max; i++) {
-                if (d1.get(i) == d2.get(i)) {
-                    DTO.add(donggopConverter.toDTO(d1.get(i)));
-                }
-            }
-        }
-        if(DTO.size() == 0) return  null;
-        else return DTO;
+        return donggopDTOS;
+//        if(id == null && name == null){
+//            return null;
+//        }
+//        List<DonggopDTO> DTO = new ArrayList<>();
+//        if(id == null){
+//            List<DonggopEntity> d = donggopRepository.getByTenDongGop(name);
+//            for (DonggopEntity donggopEntity : d) {
+//                DTO.add(donggopConverter.toDTO(donggopEntity));
+//            }
+//
+//        }if(name == null){
+//            List<DonggopEntity> d = donggopRepository.getByIdDongGop(id);
+//            for (DonggopEntity donggopEntity : d) {
+//                DTO.add(donggopConverter.toDTO(donggopEntity));
+//            }
+//        }else{
+//            List<DonggopEntity> d1 = donggopRepository.getByTenDongGop(name);
+//            List<DonggopEntity> d2 = donggopRepository.getByIdDongGop(id);
+//            int max = Math.max(d1.size(), d2.size());
+//            for(int i = 0; i < max; i++) {
+//                if (d1.get(i) == d2.get(i)) {
+//                    DTO.add(donggopConverter.toDTO(d1.get(i)));
+//                }
+//            }
+//        }
+//        if(DTO.size() == 0) return  null;
+//        else return DTO;
 
     }
 
     @Override
-    public DonggopDTO addDongGop(String id, String tenDongGop, String mucDich) {
+    public DonggopDTO addDongGop(String id, String tenDongGop, String mucDich,String note) {
         DonggopEntity d = new DonggopEntity();
         d.setId(id);
         d.setMucdich(mucDich);
         d.setTenDongGop(tenDongGop);
+        d.setNote(note);
         donggopRepository.save(d);
         return donggopConverter.toDTO(d);
     }
@@ -89,7 +97,12 @@ public class DonggopService implements IDonggopService {
 
     }
 
-
+    @Override
+    public DonggopDTO showIn4(String id) {
+        DonggopDTO donggopDTO = new DonggopDTO();
+        donggopDTO = donggopConverter.toDTO(donggopRepository.getById(id));
+        return donggopDTO;
+    }
 
 
 }

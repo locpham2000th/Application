@@ -13,6 +13,26 @@ public class DonggopDTO {
 
     private String Mucdich;
 
+    private String note;
+
+    private String link;
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
     public String getId() {
         return id;
     }

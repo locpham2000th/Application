@@ -3,14 +3,16 @@ package com.example.it3180.API;
 import com.example.it3180.DTO.quanLyPhi.PhiDTO;
 import com.example.it3180.Service.quanLyHoGiaDinh.HogiadinhService;
 import com.example.it3180.Service.quanLyPhi.PhiService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RestController
@@ -24,8 +26,11 @@ public class PhiAPI {
     }
 
     @PostMapping(value = "/addfee") // ok
-    public String addFee(@Validated String  code, String name, int amount, String purpose){
-        return phiService.addFee(code, name, amount,purpose);
+    public ResponseEntity addFee(@Validated String  code, String name, int amount, String purpose){
+        Map<String, String> data = new HashMap<>();
+        data.put("result", phiService.addFee(code, name, amount,purpose));
+        return new ResponseEntity(data, HttpStatus.OK);
+//        return phiService.addFee(code, name, amount,purpose);
     }
 
     @PutMapping(value = "/editfee") // ok
@@ -44,8 +49,22 @@ public class PhiAPI {
     }
 
     @GetMapping(value = "/findfeebyall") // ok
-    public List<PhiDTO> findFeeByALl(@Validated String code, String name){
-        return phiService.findFeeByAll(code, name);
+    public ModelAndView findFeeByALl(@RequestParam(name = "code") String code, @RequestParam(name = "name") String name){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("feesearchresult");
+        modelAndView.addObject("resultFee",phiService.findFeeByAll(code, name));
+        return modelAndView;
+    }
+
+    @GetMapping(value = "/in4Fee/{id}")
+    public ModelAndView showIn4Fee(@PathVariable String id){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("feeprofile");
+        modelAndView.addObject("resultFee",phiService.findFeeByID(id));
+        modelAndView.addObject("Unpaid",phiService.countUnpaidFamily(id));
+        modelAndView.addObject("Paid",phiService.countPaidFamily(id));
+        modelAndView.addObject("Total",phiService.calTotalAmount(id));
+        return modelAndView;
     }
 
     @GetMapping(value = "/countpaidfamily") // ok
