@@ -39,8 +39,8 @@ public class DonggopAPI {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("donateprofile");
         modelAndView.addObject("profileDonate", donggopService.showIn4(id));
-        modelAndView.addObject("sumMoney",donggopService.sumMoney(id));
-        modelAndView.addObject("countHoGiaDinh", donggopService.countHoGiaDinh(id));
+//        modelAndView.addObject("sumMoney",donggopService.sumMoney(id));
+//        modelAndView.addObject("countHoGiaDinh", donggopService.countHoGiaDinh(id));
         return modelAndView;
     }
 
