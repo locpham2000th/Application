@@ -15,5 +15,6 @@ public interface DonggopRepository extends JpaRepository<DonggopEntity, String> 
     @Query("select d from DonggopEntity d where d.id like %?1%")
     List<DonggopEntity> getByIdDongGop(String id);
 
+
     DonggopEntity getById(String id);
 }

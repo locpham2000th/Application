@@ -6,11 +6,12 @@ import com.example.it3180.Service.quanLyDongGop.DonggopService;
 import com.example.it3180.Service.quanLyDongGop.UnghoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@Controller
 @RestController
 public class DonggopAPI {
     @Autowired
