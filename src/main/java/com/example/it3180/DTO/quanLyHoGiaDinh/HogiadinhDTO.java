@@ -10,8 +10,6 @@ public class HogiadinhDTO {
     private int SoNhanKhau;
     private String Diachi;
     private int TrangThai;
-    private Instant ThoiGianDen;
-    private Instant ThoiGianRoiDi;
     private String link;
 
     public String getLink() {
@@ -62,19 +60,4 @@ public class HogiadinhDTO {
         TrangThai = trangThai;
     }
 
-    public Instant getThoiGianDen() {
-        return ThoiGianDen;
-    }
-
-    public void setThoiGianDen(Instant thoiGianDen) {
-        ThoiGianDen = thoiGianDen;
-    }
-
-    public Instant getThoiGianRoiDi() {
-        return ThoiGianRoiDi;
-    }
-
-    public void setThoiGianRoiDi(Instant thoiGianRoiDi) {
-        ThoiGianRoiDi = thoiGianRoiDi;
-    }
 }

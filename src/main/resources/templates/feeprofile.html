@@ -40,7 +40,7 @@
                         <div class="col span-1-of-3">
                             ID: 
                         </div>
-                        <div th:text="${resultFee.id}" class="col span-2-of-3">
+                        <div th:text="${resultFee.id}" class="col span-2-of-3 idFee">
                             F001   <!--Thay đổi theo hộ-->
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                         <div class="col span-1-of-3">
                             Name: 
                         </div>
-                        <div th:text="${resultFee.TenPhi}" class="col span-2-of-3">
+                        <div th:text="${resultFee.TenPhi}" class="col span-2-of-3 editer name">
                             Phí vệ sinh    <!--Thay đổi theo hộ-->
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                         <div class="col span-1-of-3">
                             Amount (VND): 
                         </div>
-                        <div th:text="${resultFee.DonGia}" class="col span-2-of-3">
+                        <div th:text="${resultFee.DonGia}" class="col span-2-of-3 editer amount ">
                             50.000   <!--Thay đổi theo hộ-->
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                         <div class="col span-1-of-3">
                             Purpose: 
                         </div>
-                        <div th:text="${resultFee.MucDich}" class="col span-2-of-3">
+                        <div th:text="${resultFee.MucDich}" class="col span-2-of-3 editer purpose">
                             Phục vụ công tác vệ sinh của tổ dân phố   <!--Thay đổi theo hộ-->
                         </div>
                     </div>
@@ -81,10 +81,9 @@
                 <div class="col span-1-of-2">
                     <div class="option-section">
                         <h3>Option</h3>
-                        <div class="row">
-                            
-                            <input class="btn" type="submit" value="Edit">
-                            <input class="btn" type="submit" value="Add">
+                        <div class="row addGiaDinh">
+                            <input class="btn edit" type="submit" value="Edit">
+                            <input class="btn add" type="submit" value="Add">
                         </div>
                     </div>
 

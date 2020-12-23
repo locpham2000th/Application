@@ -1,8 +1,10 @@
 package com.example.it3180.API;
 
 import com.example.it3180.DTO.quanLyPhi.PhiDTO;
+import com.example.it3180.DTO.quanLyPhi.TraphiDTO;
 import com.example.it3180.Service.quanLyHoGiaDinh.HogiadinhService;
 import com.example.it3180.Service.quanLyPhi.PhiService;
+import com.example.it3180.Service.quanLyPhi.TraphiService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -19,10 +21,12 @@ import java.util.Map;
 public class PhiAPI {
 
     private final PhiService phiService;
+    private final TraphiService traphiService;
 
 
-    public PhiAPI(PhiService phiService, HogiadinhService hogiadinhService) {
+    public PhiAPI(PhiService phiService, HogiadinhService hogiadinhService, TraphiService traphiService) {
         this.phiService = phiService;
+        this.traphiService = traphiService;
     }
 
     @PostMapping(value = "/addfee") // ok
@@ -81,4 +85,5 @@ public class PhiAPI {
     public Long calTotalAmount(@Validated String code){
         return phiService.calTotalAmount(code);
     }
+
 }

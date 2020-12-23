@@ -66,7 +66,11 @@ $(document).ready(
                 },
                 success: function (response) {
                     if(response.result === "Success"){
-                        alert("Success")
+                        alert("Success");
+                        $(".idFee").val("");
+                        $(".nameFee").val("");
+                        $(".amountFee").val("");
+                        $(".purposeFee").val("");
                     }
                     // console.error(response)
                 },
