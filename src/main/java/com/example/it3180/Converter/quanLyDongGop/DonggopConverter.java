@@ -22,6 +22,7 @@ public class DonggopConverter {
         donggopDTO.setMucdich(donggopEntity.getMucdich());
         donggopDTO.setTenDongGop(donggopEntity.getTenDongGop());
         donggopDTO.setNote(donggopEntity.getNote());
+        donggopDTO.setThoiGian(donggopEntity.getThoiGian());
         return donggopDTO;
     }
 

@@ -21,7 +21,6 @@ public class TraphiConverter {
         traphiEntity.setHogiadinh_traphi(hogiadinhRepository.getOne(traphiDTO.getHogiadinh_id()));
         traphiEntity.setPhi_traphi(phiRepository.getOne(traphiDTO.getPhi_id()));
         traphiEntity.setThoigiandong(traphiDTO.getThoigiandong());
-        traphiEntity.setTrangthai(traphiDTO.getTrangthai());
         return traphiEntity;
     }
 
@@ -30,7 +29,6 @@ public class TraphiConverter {
         traphiDTO.setId(traphiEntity.getId());
         traphiDTO.setHogiadinh_id(traphiEntity.getHogiadinh_traphi().getId());
         traphiDTO.setPhi_id(traphiEntity.getPhi_traphi().getId());
-        traphiDTO.setTrangthai(traphiEntity.getTrangthai());
         return traphiDTO;
     }
 

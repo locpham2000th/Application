@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.TypedQuery;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,10 +68,11 @@ public class DonggopService implements IDonggopService {
     }
 
     @Override
-    public DonggopDTO addDongGop(String id, String tenDongGop, String mucDich,String note) {
+    public DonggopDTO addDongGop(String id, String tenDongGop, String mucDich, String note) {
         DonggopEntity d = new DonggopEntity();
         d.setId(id);
         d.setMucdich(mucDich);
+        d.setThoiGian(Instant.now());
         d.setTenDongGop(tenDongGop);
         d.setNote(note);
         donggopRepository.save(d);
@@ -99,8 +101,7 @@ public class DonggopService implements IDonggopService {
 
     @Override
     public DonggopDTO showIn4(String id) {
-        DonggopDTO donggopDTO = new DonggopDTO();
-        donggopDTO = donggopConverter.toDTO(donggopRepository.getById(id));
+        DonggopDTO donggopDTO = donggopConverter.toDTO(donggopRepository.getById(id));
         return donggopDTO;
     }
 

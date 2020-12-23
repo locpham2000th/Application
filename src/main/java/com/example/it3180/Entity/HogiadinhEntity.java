@@ -24,12 +24,6 @@ public class HogiadinhEntity {
     @Column(name = "trang_thai")
     private int TrangThai;
 
-    @Column(name = "thoi_gian_den")
-    private Instant ThoiGianDen;
-
-    @Column(name = "thoi_gian_roi_di")
-    private Instant ThoiGianRoiDi;
-
     @OneToMany(fetch = FetchType.LAZY,mappedBy = "hogiadinh_traphi")
     private List<TraphiEntity> traphi = new ArrayList<>();
 
@@ -74,22 +68,6 @@ public class HogiadinhEntity {
 
     public void setTrangThai(int trangThai) {
         TrangThai = trangThai;
-    }
-
-    public Instant getThoiGianDen() {
-        return ThoiGianDen;
-    }
-
-    public void setThoiGianDen(Instant thoiGianDen) {
-        ThoiGianDen = thoiGianDen;
-    }
-
-    public Instant getThoiGianRoiDi() {
-        return ThoiGianRoiDi;
-    }
-
-    public void setThoiGianRoiDi(Instant thoiGianRoiDi) {
-        ThoiGianRoiDi = thoiGianRoiDi;
     }
 
     public List<TraphiEntity> getTraphi() {

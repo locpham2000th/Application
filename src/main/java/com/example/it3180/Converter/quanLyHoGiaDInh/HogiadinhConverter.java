@@ -13,8 +13,6 @@ public class HogiadinhConverter {
         hogiadinhEntity.setDiaChi(hogiadinhDTO.getDiachi());
         hogiadinhEntity.setHoTenChuHo(hogiadinhDTO.getHoTenChuHo());
         hogiadinhEntity.setSoNhanKhau(hogiadinhDTO.getSoNhanKhau());
-        hogiadinhEntity.setThoiGianDen(hogiadinhDTO.getThoiGianDen());
-        hogiadinhEntity.setThoiGianRoiDi(hogiadinhDTO.getThoiGianRoiDi());
         hogiadinhEntity.setTrangThai(hogiadinhDTO.getTrangThai());
         return hogiadinhEntity;
     }
@@ -25,8 +23,6 @@ public class HogiadinhConverter {
         hogiadinhDTO.setDiachi(hogiadinhEntity.getDiaChi());
         hogiadinhDTO.setHoTenChuHo(hogiadinhEntity.getHoTenChuHo());
         hogiadinhDTO.setSoNhanKhau(hogiadinhEntity.getSoNhanKhau());
-        hogiadinhDTO.setThoiGianDen(hogiadinhEntity.getThoiGianDen());
-        hogiadinhDTO.setThoiGianRoiDi(hogiadinhEntity.getThoiGianRoiDi());
         hogiadinhDTO.setTrangThai(hogiadinhEntity.getTrangThai());
         return hogiadinhDTO;
     }

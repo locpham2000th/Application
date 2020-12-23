@@ -1,6 +1,7 @@
 package com.example.it3180.Entity;
 
 import javax.persistence.*;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,10 +18,11 @@ public class DonggopEntity {
     @Column(name = "muc_dich")
     private String Mucdich;
 
-    @Column(name = "note")
+    @Column(name = "thoi_gian")
+    private Instant thoiGian;
+
+    @Column(name = "ghi_chu")
     private String note;
-
-
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "donggop_ungho")
     private List<UnghoEntity> ungho = new ArrayList<>();
@@ -63,5 +65,13 @@ public class DonggopEntity {
 
     public void setNote(String note) {
         this.note = note;
+    }
+
+    public Instant getThoiGian() {
+        return thoiGian;
+    }
+
+    public void setThoiGian(Instant thoiGian) {
+        this.thoiGian = thoiGian;
     }
 }

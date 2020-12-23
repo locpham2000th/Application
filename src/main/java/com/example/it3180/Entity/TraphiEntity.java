@@ -19,9 +19,6 @@ public class TraphiEntity {
     @JoinColumn(name = "phi_id")
     private PhiEntity phi_traphi;
 
-    @Column(name = "trang_thai")
-    private int trangthai;
-
     @Column(name = "thoi_gian_dong")
     private Instant thoigiandong;
 
@@ -49,13 +46,6 @@ public class TraphiEntity {
         this.phi_traphi = phi_traphi;
     }
 
-    public int getTrangthai() {
-        return trangthai;
-    }
-
-    public void setTrangthai(int trangthai) {
-        this.trangthai = trangthai;
-    }
 
     public Instant getThoigiandong() {
         return thoigiandong;

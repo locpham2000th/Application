@@ -15,8 +15,8 @@ public class PhiEntity {
     @Column(name = "ten_phi")
     private String TenPhi;
 
-    @Column(name = "thoi_gian_thu")
-    private Instant ThoiGianThu;
+    @Column(name = "thoi_gian")
+    private Instant ThoiGian;
 
     @Column(name = "don_gia")
     private int DonGia;
@@ -44,11 +44,11 @@ public class PhiEntity {
     }
 
     public Instant getThoiGianThu() {
-        return ThoiGianThu;
+        return ThoiGian;
     }
 
     public void setThoiGianThu(Instant thoiGianThu) {
-        ThoiGianThu = thoiGianThu;
+        ThoiGian = thoiGianThu;
     }
 
     public int getDonGia() {
