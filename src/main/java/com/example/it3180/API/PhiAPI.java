@@ -87,8 +87,10 @@ public class PhiAPI {
     }
 
     @PostMapping(value = "/addFamilyIntoFee")
-    public TraphiDTO addFamilyIntoFee(@Validated String idFamily, String idFee){
-        return traphiService.addFamilyIntoFee(idFamily,idFee);
+    public ResponseEntity addFamilyIntoFee(@Validated String idFamily, String idFee){
+        Map<String, String> data = new HashMap<>();
+        data.put("result",traphiService.addFamilyIntoFee(idFamily,idFee));
+        return new ResponseEntity(data, HttpStatus.OK);
     }
 
 }

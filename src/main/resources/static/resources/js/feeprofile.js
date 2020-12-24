@@ -61,6 +61,11 @@ $(document).ready(function (){
             },
             success: function (response){
                 console.error(response);
+                if(response.result == "success"){
+                    alert("Thành Công");
+                }else {
+                    alert("Thất bại");
+                }
                 $(".addGiaDinh").html("");
                 let element2 = `<input class="btn edit" type="submit" value="Edit">
                             <input class="btn add" type="submit" value="Add">`;

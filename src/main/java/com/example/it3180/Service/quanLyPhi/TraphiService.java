@@ -1,7 +1,6 @@
 package com.example.it3180.Service.quanLyPhi;
 
 import com.example.it3180.Converter.quanLyPhi.TraphiConverter;
-import com.example.it3180.DTO.quanLyPhi.TraphiDTO;
 import com.example.it3180.Entity.TraphiEntity;
 import com.example.it3180.Repository.HogiadinhRepository;
 import com.example.it3180.Repository.PhiRepository;
@@ -26,13 +25,19 @@ public class TraphiService implements ITraphiService {
     }
 
     @Override
-    public TraphiDTO addFamilyIntoFee(String idFamily, String idFee) {
+    public String addFamilyIntoFee(String idFamily, String idFee) {
         TraphiEntity traphiEntity = new TraphiEntity();
-        traphiEntity.setHogiadinh(hogiadinhRepository.getOne(idFamily));
-        traphiEntity.setPhi(phiRepository.getOne(idFee));
-        traphiEntity.setThoigiandong(Instant.now());
-        traphiEntity = traphiRepository.save(traphiEntity);
-        return traphiConverter.toDTO(traphiEntity);
+        TraphiEntity traphiEntityold = traphiRepository.findHogiadinhAndPhi(idFamily,idFee);
+        if(traphiEntityold == null){
+            traphiEntity.setHogiadinh(hogiadinhRepository.getOne(idFamily));
+            traphiEntity.setPhi(phiRepository.getOne(idFee));
+            traphiEntity.setThoigiandong(Instant.now());
+            traphiEntity = traphiRepository.save(traphiEntity);
+            return "success";
+        }else {
+            return "error";
+        }
+
     }
 
 }
