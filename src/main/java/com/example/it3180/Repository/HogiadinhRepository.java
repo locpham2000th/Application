@@ -18,10 +18,10 @@ public interface HogiadinhRepository extends JpaRepository<HogiadinhEntity, Stri
 
     List<HogiadinhEntity> findAllByDiaChiContaining(String diachi);
 
-    @Query(value = "select count(t.phi_traphi) from HogiadinhEntity h left join TraphiEntity t on h.id = t.hogiadinh_traphi where h.id = ?1")
+    @Query(value = "select count(t.phi) from HogiadinhEntity h left join TraphiEntity t on h.id = t.hogiadinh where h.id = ?1")
     Long countpaidfee(String id);
 
-    @Query(value = "select sum(p.DonGia)from HogiadinhEntity h left join TraphiEntity t on h.id = t.hogiadinh_traphi left join PhiEntity p on p.id = t.phi_traphi where h.id = ?1")
+    @Query(value = "select sum(p.DonGia)from HogiadinhEntity h left join TraphiEntity t on h.id = t.hogiadinh left join PhiEntity p on p.id = t.phi where h.id = ?1")
     Long countTotal(String id);
 
     @Query(value = "select count(h.id) from HogiadinhEntity h")

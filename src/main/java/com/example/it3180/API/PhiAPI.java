@@ -86,4 +86,9 @@ public class PhiAPI {
         return phiService.calTotalAmount(code);
     }
 
+    @PostMapping(value = "/addFamilyIntoFee")
+    public TraphiDTO addFamilyIntoFee(@Validated String idFamily, String idFee){
+        return traphiService.addFamilyIntoFee(idFamily,idFee);
+    }
+
 }

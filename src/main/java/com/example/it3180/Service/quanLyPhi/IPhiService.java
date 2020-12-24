@@ -1,6 +1,7 @@
 package com.example.it3180.Service.quanLyPhi;
 
 import com.example.it3180.DTO.quanLyPhi.PhiDTO;
+import com.example.it3180.Entity.TraphiEntity;
 
 import java.util.List;
 
@@ -16,5 +17,7 @@ public interface IPhiService {
     Long countPaidFamily(String code);
     Long countUnpaidFamily(String code);
     Long calTotalAmount(String code);
+
+
 
 }

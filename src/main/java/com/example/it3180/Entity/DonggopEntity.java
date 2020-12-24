@@ -24,7 +24,7 @@ public class DonggopEntity {
     @Column(name = "ghi_chu")
     private String note;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "donggop_ungho")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "donggop")
     private List<UnghoEntity> ungho = new ArrayList<>();
 
     public String getId() {

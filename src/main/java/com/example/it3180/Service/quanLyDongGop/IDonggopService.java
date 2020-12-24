@@ -20,5 +20,6 @@ public interface IDonggopService {
 
     DonggopDTO editDongGop(String id, String name, String purpose, String note);
 
+//    DonggopDTO
 
 }

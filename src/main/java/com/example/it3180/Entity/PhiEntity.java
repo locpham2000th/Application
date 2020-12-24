@@ -24,7 +24,7 @@ public class PhiEntity {
     @Column(name = "muc_dich")
     private String MucDich;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "phi_traphi")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "phi")
     private List<TraphiEntity> traphi = new ArrayList<>();
 
     public String getId() {

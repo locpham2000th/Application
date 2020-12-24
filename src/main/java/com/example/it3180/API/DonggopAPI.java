@@ -2,6 +2,7 @@ package com.example.it3180.API;
 
 
 import com.example.it3180.DTO.quanLyDongGop.DonggopDTO;
+import com.example.it3180.DTO.quanLyDongGop.UnghoDTO;
 import com.example.it3180.Service.quanLyDongGop.DonggopService;
 import com.example.it3180.Service.quanLyDongGop.UnghoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,8 +41,8 @@ public class DonggopAPI {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("donateprofile");
         modelAndView.addObject("profileDonate", donggopService.showIn4(id));
-//        modelAndView.addObject("sumMoney",donggopService.sumMoney(id));
-//        modelAndView.addObject("countHoGiaDinh", donggopService.countHoGiaDinh(id));
+        modelAndView.addObject("sumMoney",donggopService.sumMoney(id));
+        modelAndView.addObject("countHoGiaDinh", donggopService.countHoGiaDinh(id));
         return modelAndView;
     }
 
@@ -69,6 +70,11 @@ public class DonggopAPI {
     @PutMapping(value = "/editDonate")
     public DonggopDTO editDongGop(@Validated String id, String name, String purpose, String note){
         return donggopService.editDongGop(id,name,purpose,note);
+    }
+
+    @PostMapping(value = "/addFamilyintoDonate")
+    public UnghoDTO addFamilyintoDonate(@Validated String idFamily, String idDonate,int amount){
+        return unghoService.addFamilyintoDonate(idFamily,idDonate,amount);
     }
 
 

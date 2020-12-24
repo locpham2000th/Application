@@ -11,4 +11,6 @@ public interface IUnghoService {
 
     void addUngHo(int soTien, String idDongGop, String idHoGiaDinh);
 
+    UnghoDTO addFamilyintoDonate(String idFamily, String idDonate, int amount);
+
 }

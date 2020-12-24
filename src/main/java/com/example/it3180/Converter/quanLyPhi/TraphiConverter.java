@@ -18,8 +18,8 @@ public class TraphiConverter {
 
     public TraphiEntity toEntity(TraphiDTO traphiDTO){
         TraphiEntity traphiEntity = new TraphiEntity();
-        traphiEntity.setHogiadinh_traphi(hogiadinhRepository.getOne(traphiDTO.getHogiadinh_id()));
-        traphiEntity.setPhi_traphi(phiRepository.getOne(traphiDTO.getPhi_id()));
+        traphiEntity.setHogiadinh(hogiadinhRepository.getOne(traphiDTO.getHogiadinh_id()));
+        traphiEntity.setPhi(phiRepository.getOne(traphiDTO.getPhi_id()));
         traphiEntity.setThoigiandong(traphiDTO.getThoigiandong());
         return traphiEntity;
     }
@@ -27,8 +27,8 @@ public class TraphiConverter {
     public TraphiDTO toDTO(TraphiEntity traphiEntity){
         TraphiDTO traphiDTO = new TraphiDTO();
         traphiDTO.setId(traphiEntity.getId());
-        traphiDTO.setHogiadinh_id(traphiEntity.getHogiadinh_traphi().getId());
-        traphiDTO.setPhi_id(traphiEntity.getPhi_traphi().getId());
+        traphiDTO.setHogiadinh_id(traphiEntity.getHogiadinh().getId());
+        traphiDTO.setPhi_id(traphiEntity.getPhi().getId());
         return traphiDTO;
     }
 

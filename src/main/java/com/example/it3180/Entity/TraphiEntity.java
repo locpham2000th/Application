@@ -8,16 +8,16 @@ import java.time.Instant;
 public class TraphiEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "hogiadinh_id")
-    private HogiadinhEntity hogiadinh_traphi;
+    private HogiadinhEntity hogiadinh;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "phi_id")
-    private PhiEntity phi_traphi;
+    private PhiEntity phi;
 
     @Column(name = "thoi_gian_dong")
     private Instant thoigiandong;
@@ -30,22 +30,21 @@ public class TraphiEntity {
         this.id = id;
     }
 
-    public HogiadinhEntity getHogiadinh_traphi() {
-        return hogiadinh_traphi;
+    public HogiadinhEntity getHogiadinh() {
+        return hogiadinh;
     }
 
-    public void setHogiadinh_traphi(HogiadinhEntity hogiadinh_traphi) {
-        this.hogiadinh_traphi = hogiadinh_traphi;
+    public void setHogiadinh(HogiadinhEntity hogiadinh) {
+        this.hogiadinh = hogiadinh;
     }
 
-    public PhiEntity getPhi_traphi() {
-        return phi_traphi;
+    public PhiEntity getPhi() {
+        return phi;
     }
 
-    public void setPhi_traphi(PhiEntity phi_traphi) {
-        this.phi_traphi = phi_traphi;
+    public void setPhi(PhiEntity phi) {
+        this.phi = phi;
     }
-
 
     public Instant getThoigiandong() {
         return thoigiandong;

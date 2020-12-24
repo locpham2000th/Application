@@ -17,9 +17,9 @@ public interface PhiRepository extends JpaRepository<PhiEntity, String> {
     @Query(value = "select p from PhiEntity p where p.TenPhi like %?1%")
     List<PhiEntity> findFeeByName(String name);
 
-    @Query(value = "select count(t.id) from TraphiEntity t left join PhiEntity p on p.id = t.phi_traphi where p.id = ?1")
+    @Query(value = "select count(t.id) from TraphiEntity t left join PhiEntity p on p.id = t.phi where p.id = ?1")
     Long countPaidFamily(String code);
 
-    @Query(value = "select sum(p.DonGia * h.SoNhanKhau) from PhiEntity p left join TraphiEntity t on p.id = t.phi_traphi left join HogiadinhEntity h on h.id = t.hogiadinh_traphi where p.id = ?1")
+    @Query(value = "select sum(p.DonGia * h.SoNhanKhau) from PhiEntity p left join TraphiEntity t on p.id = t.phi left join HogiadinhEntity h on h.id = t.hogiadinh where p.id = ?1")
     Long calTotalAmount(String code);
 }

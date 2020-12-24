@@ -81,10 +81,9 @@
                 <div class="col span-1-of-2">
                     <div class="option-section">
                         <h3>Option</h3>
-                        <div class="row">
-                            
+                        <div class="row addHoGiaDinh">
                             <input class="btn edit" type="submit" value="Edit">
-                            <input class="btn" type="submit" value="Add">
+                            <input class="btn add" type="submit" value="Add">
                         </div>
                     </div>
 
@@ -94,7 +93,7 @@
                             <div class="col span-2-of-3">
                                 Number of Donations:
                             </div>
-                            <div class="col span-1-of-3">
+                            <div class="col span-1-of-3" th:text="${countHoGiaDinh}">
                                 25   <!--Thay đổi theo hộ-->
                             </div>
                         </div>

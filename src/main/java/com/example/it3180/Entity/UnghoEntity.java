@@ -18,10 +18,12 @@ public class UnghoEntity {
     private Instant thoigian;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private HogiadinhEntity hogiadinh_ungho;
+    @JoinColumn(name = "hogiadinh_id")
+    private HogiadinhEntity hogiadinh;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private DonggopEntity donggop_ungho;
+    @JoinColumn(name = "donggop_id")
+    private DonggopEntity donggop;
 
     public Long getId() {
         return id;
@@ -47,19 +49,19 @@ public class UnghoEntity {
         this.thoigian = thoigian;
     }
 
-    public HogiadinhEntity getHogiadinh_ungho() {
-        return hogiadinh_ungho;
+    public HogiadinhEntity getHogiadinh() {
+        return hogiadinh;
     }
 
-    public void setHogiadinh_ungho(HogiadinhEntity hogiadinh_ungho) {
-        this.hogiadinh_ungho = hogiadinh_ungho;
+    public void setHogiadinh(HogiadinhEntity hogiadinh) {
+        this.hogiadinh = hogiadinh;
     }
 
-    public DonggopEntity getDonggop_ungho() {
-        return donggop_ungho;
+    public DonggopEntity getDonggop() {
+        return donggop;
     }
 
-    public void setDonggop_ungho(DonggopEntity donggop_ungho) {
-        this.donggop_ungho = donggop_ungho;
+    public void setDonggop(DonggopEntity donggop) {
+        this.donggop = donggop;
     }
 }

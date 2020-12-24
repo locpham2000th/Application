@@ -24,10 +24,10 @@ public class HogiadinhEntity {
     @Column(name = "trang_thai")
     private int TrangThai;
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "hogiadinh_traphi")
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "hogiadinh")
     private List<TraphiEntity> traphi = new ArrayList<>();
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "hogiadinh_ungho")
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "hogiadinh")
     private List<UnghoEntity> ungho = new ArrayList<>();
 
     public String getId() {
