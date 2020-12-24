@@ -3,6 +3,7 @@ package com.example.it3180.DTO.quanLyDongGop;
 import com.example.it3180.Entity.UnghoEntity;
 
 import java.time.Instant;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +17,7 @@ public class DonggopDTO {
 
     private String note;
 
-    private Instant thoiGian;
+    private LocalDate thoiGian;
 
     private String link;
 
@@ -60,11 +61,11 @@ public class DonggopDTO {
         Mucdich = mucdich;
     }
 
-    public Instant getThoiGian() {
+    public LocalDate getThoiGian() {
         return thoiGian;
     }
 
-    public void setThoiGian(Instant thoiGian) {
+    public void setThoiGian(LocalDate thoiGian) {
         this.thoiGian = thoiGian;
     }
 }

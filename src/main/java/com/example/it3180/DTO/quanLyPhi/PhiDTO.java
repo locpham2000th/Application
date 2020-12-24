@@ -2,12 +2,13 @@ package com.example.it3180.DTO.quanLyPhi;
 
 import javax.persistence.Column;
 import java.time.Instant;
+import java.time.LocalDate;
 
 public class PhiDTO {
 
     private String id;
     private String TenPhi;
-    private Instant ThoiGianThu;
+    private LocalDate ThoiGianThu;
     private int DonGia;
     private String MucDich;
     private String link;
@@ -28,11 +29,11 @@ public class PhiDTO {
         TenPhi = tenPhi;
     }
 
-    public Instant getThoiGianThu() {
+    public LocalDate getThoiGianThu() {
         return ThoiGianThu;
     }
 
-    public void setThoiGianThu(Instant thoiGianThu) {
+    public void setThoiGianThu(LocalDate thoiGianThu) {
         ThoiGianThu = thoiGianThu;
     }
 

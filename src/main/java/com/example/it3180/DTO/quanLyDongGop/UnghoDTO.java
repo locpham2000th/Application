@@ -2,12 +2,13 @@ package com.example.it3180.DTO.quanLyDongGop;
 
 import javax.persistence.Column;
 import java.time.Instant;
+import java.time.LocalDate;
 
 public class UnghoDTO {
 
     private Long id;
     private int sotien;
-    private Instant thoigian;
+    private LocalDate thoigian;
     private String hogiadinh_id;
     private String donggop_id;
 
@@ -43,11 +44,11 @@ public class UnghoDTO {
         this.sotien = sotien;
     }
 
-    public Instant getThoigian() {
+    public LocalDate getThoigian() {
         return thoigian;
     }
 
-    public void setThoigian(Instant thoigian) {
+    public void setThoigian(LocalDate thoigian) {
         this.thoigian = thoigian;
     }
 }

@@ -2,11 +2,12 @@ package com.example.it3180.DTO.quanLyPhi;
 
 import javax.persistence.Column;
 import java.time.Instant;
+import java.time.LocalDate;
 
 public class TraphiDTO {
 
     private Long id;
-    private Instant thoigiandong;
+    private LocalDate thoigiandong;
     private String hogiadinh_id;
     private String phi_id;
 
@@ -34,11 +35,11 @@ public class TraphiDTO {
         this.id = id;
     }
 
-    public Instant getThoigiandong() {
+    public LocalDate getThoigiandong() {
         return thoigiandong;
     }
 
-    public void setThoigiandong(Instant thoigiandong) {
+    public void setThoigiandong(LocalDate thoigiandong) {
         this.thoigiandong = thoigiandong;
     }
 }
