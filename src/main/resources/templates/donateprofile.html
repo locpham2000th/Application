@@ -40,7 +40,7 @@
                         <div class="col span-1-of-3">
                             ID: 
                         </div>
-                        <div th:text="${profileDonate.id}" class="col span-2-of-3">
+                        <div th:text="${profileDonate.id}" class="col span-2-of-3 idDonate">
                             D001   <!--Thay đổi theo hộ-->
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                         <div class="col span-1-of-3">
                             Name: 
                         </div>
-                        <div th:text="${profileDonate.TenDongGop}" class="col span-2-of-3">
+                        <div th:text="${profileDonate.TenDongGop}" class="col span-2-of-3 editer name">
                             Ủng hộ đồng bào miền Trung    <!--Thay đổi theo hộ-->
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                         <div class="col span-1-of-3">
                             Published Date: 
                         </div>
-                        <div class="col span-2-of-3">
+                        <div class="col span-2-of-3" th:text="${profileDonate.thoiGian}">
                             08-12-2020  <!--Thay đổi theo hộ-->
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                         <div  class="col span-1-of-3">
                             Purpose: 
                         </div>
-                        <div th:text="${profileDonate.Mucdich}" class="col span-2-of-3">
+                        <div th:text="${profileDonate.Mucdich}" class="col span-2-of-3 editer purpose">
                             Quyên góp ủng hộ đồng bào miền lũ   <!--Thay đổi theo hộ-->
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                         <div class="col span-1-of-3">
                             Note:  
                         </div>
-                        <div th:text="${profileDonate.note}" class="col span-2-of-3">
+                        <div th:text="${profileDonate.note}" class="col span-2-of-3 editer note">
                             Có thể ủng hộ tiền hoặc hiện vật. Hiện vật sẽ được quy đổi thành tiền.  <!--Thay đổi theo hộ-->
                         </div>
                     </div>
@@ -83,7 +83,7 @@
                         <h3>Option</h3>
                         <div class="row">
                             
-                            <input class="btn" type="submit" value="Edit">
+                            <input class="btn edit" type="submit" value="Edit">
                             <input class="btn" type="submit" value="Add">
                         </div>
                     </div>

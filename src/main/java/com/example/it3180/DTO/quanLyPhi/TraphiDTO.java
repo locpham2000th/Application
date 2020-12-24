@@ -6,7 +6,6 @@ import java.time.Instant;
 public class TraphiDTO {
 
     private Long id;
-    private int trangthai;
     private Instant thoigiandong;
     private String hogiadinh_id;
     private String phi_id;
@@ -33,14 +32,6 @@ public class TraphiDTO {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public int getTrangthai() {
-        return trangthai;
-    }
-
-    public void setTrangthai(int trangthai) {
-        this.trangthai = trangthai;
     }
 
     public Instant getThoigiandong() {

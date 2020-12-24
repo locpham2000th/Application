@@ -66,5 +66,10 @@ public class DonggopAPI {
         return "Ok";
     }
 
+    @PutMapping(value = "/editDonate")
+    public DonggopDTO editDongGop(@Validated String id, String name, String purpose, String note){
+        return donggopService.editDongGop(id,name,purpose,note);
+    }
+
 
 }

@@ -1,5 +1,7 @@
 package com.example.it3180.Service.quanLyDongGop;
 
+import com.example.it3180.Converter.quanLyDongGop.DonggopConverter;
+import com.example.it3180.DTO.quanLyDongGop.DonggopDTO;
 import com.example.it3180.DTO.quanLyDongGop.UnghoDTO;
 import com.example.it3180.Entity.DonggopEntity;
 import com.example.it3180.Entity.HogiadinhEntity;
@@ -21,6 +23,7 @@ public class UnghoService implements IUnghoService {
     UnghoRepository unghoRepository;
     HogiadinhRepository hogiadinhRepository;
     DonggopRepository donggopRepository;
+    DonggopConverter donggopConverter;
 
     @Override
     public void addUngHo(int soTien,  String idDongGop, String idHoGiaDinh) {
@@ -33,9 +36,5 @@ public class UnghoService implements IUnghoService {
         u.setThoigian(Instant.now());
         unghoRepository.save(u);
     }
-
-
-
-
 
 }

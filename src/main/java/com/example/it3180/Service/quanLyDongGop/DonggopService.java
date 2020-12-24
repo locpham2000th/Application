@@ -105,5 +105,14 @@ public class DonggopService implements IDonggopService {
         return donggopDTO;
     }
 
+    @Override
+    public DonggopDTO editDongGop(String id, String name, String purpose, String note) {
+        DonggopEntity donggopEntity = donggopRepository.getById(id);
+        donggopEntity.setTenDongGop(name);
+        donggopEntity.setMucdich(purpose);
+        donggopEntity.setNote(note);
+        donggopEntity = donggopRepository.save(donggopEntity);
+        return donggopConverter.toDTO(donggopEntity);
+    }
 
 }
