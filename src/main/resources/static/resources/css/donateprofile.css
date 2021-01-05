@@ -171,7 +171,11 @@ header{
 }
 
 .option-section .row{
-    margin-left: 40px;
+    margin-left: 20px;
+}
+
+.cfbtn{
+    margin-top: 10px;
 }
 
 .option-section .btn{

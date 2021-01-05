@@ -21,18 +21,21 @@ $(document).ready(function (){
                 // console.error("response", response);
                 console.error(response.result);
                 if (response.result === "error"){
-                    alert("đã có hộ gia đinh này xin mời nhập lại");
+                    alert("Family already exists!!!");
                     code = $("#code").val("");
                     name = $("#name").val("");
                     number = $("#number").val("");
                     address = $("#address").val("");
                 }else {
-                    alert("Đã thêm thành công");
+                    alert("Add successfully :)");
                     code = $("#code").val("");
                     name = $("#name").val("");
                     number = $("#number").val("");
                     address = $("#address").val("");
                 }
+            },
+            error: function(response){
+                alert("Add failed :(")
             }
         })
     })

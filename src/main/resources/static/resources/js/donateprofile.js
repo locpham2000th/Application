@@ -47,9 +47,18 @@ $(document).ready(function (){
 
     $("body").on("click",".add", function (){
         $(".addHoGiaDinh").html("");
-        let element = `<input class="idHoGiaDinh" type="text" placeholder="Số hộ khẩu" >
-                        <input class="amount" type="text" placeholder="số tiền">
-                       <input class="btn add1" type="button" value="Comfirm">`;
+        let element = `
+                        <div class='row'>
+                            <div class="col span-1-of-2">
+                                  <input class="idHoGiaDinh" type="text" placeholder="Family ID" >
+                                  <input class="amount" type="text" placeholder="Amount">
+                             </div>
+                            <div class="col span-1-of-2">
+                                  <input class="btn add1 cfbtn" type="button" value="Comfirm">
+                            </div>
+                        </div>
+                        `;
+
         $(".addHoGiaDinh").append(element);
         // console.error($(".addHoGiaDinh").html())
     })

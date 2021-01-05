@@ -38,6 +38,7 @@ $(document).ready(function() {
                         diachi:address,
                     },
                     success: function (response){
+                        alert("Edit successfully :)");
                         $(".edit").html("");
                         $(".name").text(response.hoTenChuHo);
                         $(".member").text(response.soNhanKhau);
@@ -63,10 +64,13 @@ $(document).ready(function() {
                 },
                 dataType:"json",
                 success: function (response){
+
                     console.error(response);
                 },
                 error: function (response){
                     console.error(response);
+                    alert("Delete successfully :)");
+                    $('.state').text("Left");
                 }
             })
         })

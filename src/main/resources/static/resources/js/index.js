@@ -28,23 +28,29 @@ $(document).ready(
             let purpose = $(".purposeDonate").val();
             let note = $(".noteDonate").val();
 
-            $.ajax({
-                type:"Post",
-                url:"/input",
-                dataType:"json",
-                data:{
-                    id: id,
-                    tenDongGop: name,
-                    mucDich: purpose,
-                    note:note,
-                },
-                success: function (response) {
-                    alert("da them thanh cong");
-                },
-                error: function () {
-                    alert("da xay ra loi");
-                }
-            })
+            if(false){
+                alert("Lack of information!!!");
+            }
+            else{
+                $.ajax({
+                    type:"Post",
+                    url:"/input",
+                    dataType:"json",
+                    data:{
+                        id: id,
+                        tenDongGop: name,
+                        mucDich: purpose,
+                        note:note,
+                    },
+                    success: function (response) {
+                        alert("Add successfully :)");
+                    },
+                    error: function () {
+                        alert("Add failed :(");
+                    }
+                })
+            }
+
 
         })
 
@@ -66,15 +72,27 @@ $(document).ready(
                 },
                 success: function (response) {
                     if(response.result === "Success"){
-                        alert("Success");
+                        alert("Add successfully :)");
                         $(".idFee").val("");
                         $(".nameFee").val("");
                         $(".amountFee").val("");
                         $(".purposeFee").val("");
                     }
                     // console.error(response)
-                },
+                },error: function(response){
+                    alert("Add failed :(")
+                }
             })
+        })
+
+        $(".prob1btn").click(function(){
+            let prob = $(".prob1").val();
+            $('textarea').text(prob);
+        })
+
+        $(".prob2btn").click(function(){
+            let prob = $(".prob2").val();
+            $('textarea').text(prob);
         })
     }
 )

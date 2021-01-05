@@ -2,8 +2,18 @@ $(document).ready(function (){
     $("body").on("click",".edit",function (){
         let element =
             `<input type="text">`;
+        let name = $('.name').text();
+        let amount = $('.amount').text();
+        let purpose = $('.purpose').text();
+
+
+
         $(".editer").html("");
         $(".editer").append(element);
+
+        $(".editer").children("input").eq(0).val(name);
+        $(".editer").children("input").eq(1).val(amount);
+        $(".editer").children("input").eq(2).val(purpose);
         $(this).addClass("Comfirm");
         $(this).removeClass("edit");
         $(this).attr("value","Comfirm");
@@ -26,6 +36,7 @@ $(document).ready(function (){
                 newPurpose: purpose,
             },
             success: function (response){
+                alert('Succesfully edited :)');
                 $(".editer").html("");
                 $(".name").text(response.tenPhi);
                 $(".amount").text(response.donGia);
@@ -61,15 +72,16 @@ $(document).ready(function (){
             },
             success: function (response){
                 console.error(response);
-                if(response.result == "success"){
-                    alert("Thành Công");
-                }else {
-                    alert("Thất bại");
-                }
+
+                alert("Sucess :)");
+
                 $(".addGiaDinh").html("");
                 let element2 = `<input class="btn edit" type="submit" value="Edit">
                             <input class="btn add" type="submit" value="Add">`;
                 $(".addGiaDinh").append(element2);
+            },
+            error: function(response){
+                alert('Add fail :( \nError: ID does not exist');
             }
         })
 

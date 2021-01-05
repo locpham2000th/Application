@@ -314,7 +314,26 @@ h1{
     position: relative;
 }
 
+.fee-box form div{
+    list-style: none;
+    margin: 10px;
+    margin-left: 15%;
+    position: relative;
+}
+
 .fee-box ul li input{
+    width: 55%;
+    position: absolute;
+    right: 12%;
+    top: -5%;
+    height: 25px;
+    border-radius: 5px;
+    border: 2px solid #ff6666;
+    text-align: left;
+    padding: 5px 10px;
+}
+
+.fee-box form div input{
     width: 55%;
     position: absolute;
     right: 12%;
@@ -333,7 +352,11 @@ h1{
     left: 6%;
     font-size: 120%;
     font-weight: 700;
+    border: none;
+    outline: white;
 }
+
+
 
 .donate-section{
     height: 100vh;

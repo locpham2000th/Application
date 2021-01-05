@@ -78,9 +78,9 @@ public class HogiadinhAPI {
         modelAndView.addObject("paidFee",hogiadinhService.countpaidfee(id));
         modelAndView.addObject("total",hogiadinhService.counttotal(id));
         if(String.valueOf(hogiadinhDTO.getTrangThai()).equals("1") ){
-            modelAndView.addObject("state", "đang sinh sống" );
+            modelAndView.addObject("state", "Living" );
         }else {
-            modelAndView.addObject("state","đã rời đi");
+            modelAndView.addObject("state","Left");
         }
         return modelAndView;
     }
